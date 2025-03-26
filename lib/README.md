@@ -1,6 +1,6 @@
-# @m2d/emoji
+# @m2d/remark-docx
 
-[![test](https://github.com/md2docx/md2docx-plugin-template/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/md2docx-plugin-template/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/md2docx/md2docx-plugin-template/maintainability) [![codecov](https://codecov.io/gh/md2docx/md2docx-plugin-template/graph/badge.svg)](https://codecov.io/gh/md2docx/md2docx-plugin-template) [![Version](https://img.shields.io/npm/v/@m2d/emoji.svg?colorB=green)](https://www.npmjs.com/package/@m2d/emoji) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/emoji.svg)](https://www.npmjs.com/package/@m2d/emoji) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/emoji)
+[![test](https://github.com/md2docx/remark-docx/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/remark-docx/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/md2docx/remark-docx/maintainability) [![codecov](https://codecov.io/gh/md2docx/remark-docx/graph/badge.svg)](https://codecov.io/gh/md2docx/remark-docx) [![Version](https://img.shields.io/npm/v/@m2d/remark-docx.svg?colorB=green)](https://www.npmjs.com/package/@m2d/remark-docx) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/remark-docx.svg)](https://www.npmjs.com/package/@m2d/remark-docx) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/remark-docx)
 
 > Emoji shortcode support for `mdast2docx`
 
@@ -20,19 +20,19 @@ This plugin adds support for emoji shortcodes (e.g., `:smile:`, `:rocket:`) in y
 ## 📦 Installation
 
 ```bash
-pnpm install @m2d/emoji
+pnpm install @m2d/remark-docx
 ```
 
 **_or_**
 
 ```bash
-yarn add @m2d/emoji
+yarn add @m2d/remark-docx
 ```
 
 **_or_**
 
 ```bash
-npm add @m2d/emoji
+npm add @m2d/remark-docx
 ```
 
 ---

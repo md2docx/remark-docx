@@ -1,16 +1,16 @@
 {
-  "name": "@m2d/emoji",
+  "name": "@m2d/remark-docx",
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
-  "version": "0.1.0",
-  "description": "A plugin for @m2d/core that parses emoji shortcodes like :smile: and replaces them with their corresponding Unicode emoji characters for DOCX output.",
+  "version": "0.0.0",
+  "description": "",
   "license": "MPL-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "repository": "github:md2docx/md2docx-plugin-template",
-  "bugs": "https://github.com/md2docx/md2docx-plugin-template/issues",
-  "homepage": "https://github.com/md2docx/md2docx-plugin-template/#readme",
+  "repository": "github:md2docx/remark-docx",
+  "bugs": "https://github.com/md2docx/remark-docx/issues",
+  "homepage": "https://github.com/md2docx/remark-docx/#readme",
   "sideEffects": false,
   "files": [
     "dist/**"
@@ -60,19 +60,14 @@
   "funding": [
     {
       "type": "github",
-      "url": "https://github.com/sponsors/mayank1513"
+      "url": "https://github.com/sponsors/md2docx"
     },
     {
       "type": "github",
-      "url": "https://github.com/sponsors/md2docx"
+      "url": "https://github.com/sponsors/mayank1513"
     }
   ],
   "keywords": [
-    "emoji",
-    "emoji-plugin",
-    "emoji-support",
-    "shortcode",
-    "unicode",
     "text-processing",
     "markdown-to-docx",
     "mdast-to-docx",

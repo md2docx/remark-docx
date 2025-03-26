@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@m2d/core": "latest",
-    "@m2d/emoji": "workspace:*",
+    "@m2d/emoji": "latest",
     "@repo/shared": "workspace:*",
     "mdast2docx": "0.3.0",
     "next": "^15.2.3",
@@ -27,7 +27,8 @@
     "remark-math": "^6.0.0",
     "remark-parse": "^11.0.0",
     "unified": "^11.0.5",
-    "webgl-generative-particles": "^0.0.1"
+    "webgl-generative-particles": "^0.0.1",
+    "@m2d/remark-docx": "workspace:*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.2.3",

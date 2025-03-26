@@ -12,13 +12,13 @@
 - [ ] Install dependencies using `pnpm`
   - Run `pnpm i` to install dependencies
 - [ ] Make sure you run `pnpm rebrand` from the root directory to rebrand your repo.
-- [ ] 🌟 Enable [private vulnerability reporting]
+- [ ] 🌟 Enable [private vulnerability reporting](https://github.com/md2docx/remark-docx/security)
 - [ ] Set up `CodeCov`
   - Visit Codecov and set up your repo
-  - Create [repository secret] for `CODECOV_TOKEN`
+  - Create [repository secret]((https://github.com/md2docx/remark-docx/settings/secrets/actions)) for `CODECOV_TOKEN`
 - [ ] Set up `CodeClimate`
   - Visit CodeClimate and set up your repo
-  - Create [repository secret] for `CC_TEST_REPORTER_ID`
+  - Create [repository secret]((https://github.com/md2docx/remark-docx/settings/secrets/actions)) for `CC_TEST_REPORTER_ID`
   - Add `*.test.*` to ignore patterns on the website
   - Update Code Climate badge
 - [ ] Add `NPM_AUTH_TOKEN` to repository secrets to automate package publishing

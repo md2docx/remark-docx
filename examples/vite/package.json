@@ -20,7 +20,8 @@
     "react18-loaders": "latest",
     "react18-themes": "^3.2.0",
     "@m2d/core": "latest",
-    "@m2d/emoji": "workspace:*"
+    "@m2d/emoji": "latest",
+    "@m2d/remark-docx": "workspace:*"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
