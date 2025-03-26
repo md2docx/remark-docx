@@ -1,0 +1,111 @@
+{
+  "name": "@m2d/emoji",
+  "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A plugin for @m2d/core that parses emoji shortcodes like :smile: and replaces them with their corresponding Unicode emoji characters for DOCX output.",
+  "license": "MPL-2.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": "github:md2docx/md2docx-plugin-template",
+  "bugs": "https://github.com/md2docx/md2docx-plugin-template/issues",
+  "homepage": "https://github.com/md2docx/md2docx-plugin-template/#readme",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup && tsc -p tsconfig-build.json && gzip -c dist/index.js | wc -c",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch && tsc -p tsconfig-build.json -w",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.13.12",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.0.9",
+    "docx": "^9.3.0",
+    "esbuild-plugin-rdi": "^0.0.0",
+    "jsdom": "^26.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "unified": "^11.0.5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "@m2d/core": "^0.0.3"
+  },
+  "peerDependencies": {
+    "docx": "^9.3.0"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/mayank1513"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/md2docx"
+    }
+  ],
+  "keywords": [
+    "emoji",
+    "emoji-plugin",
+    "emoji-support",
+    "shortcode",
+    "unicode",
+    "text-processing",
+    "markdown-to-docx",
+    "mdast-to-docx",
+    "mdast",
+    "markdown",
+    "md2docx",
+    "mdast2docx",
+    "plugin",
+    "converter",
+    "docx",
+    "ms-word",
+    "document-generator",
+    "document-generation",
+    "remark",
+    "unified",
+    "images",
+    "hyperlinks",
+    "footnotes",
+    "typescript",
+    "open-source",
+    "customizable",
+    "modern",
+    "seamless-integration",
+    "cutting-edge",
+    "compatibility",
+    "progressive",
+    "web-development",
+    "frontend",
+    "automation",
+    "google-sheets",
+    "generative-ai",
+    "rich-text",
+    "m2d",
+    "mayank1513"
+  ]
+}

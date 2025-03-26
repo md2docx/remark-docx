@@ -1,0 +1,72 @@
+{
+  "scope": "Workspace",
+  "tasks": {
+    "55DAZwduwTvlaxaJC8hlX": {
+      "id": "55DAZwduwTvlaxaJC8hlX",
+      "description": "(Optional) Set up [Deepsource](https://app.deepsource.com/login) for static code analysis",
+      "columnId": "column-todo"
+    },
+    "FDFqCQvLm2mUlnTJ3Gna5": {
+      "id": "FDFqCQvLm2mUlnTJ3Gna5",
+      "description": "Push your changes/Create PR and see your library being automatically tested and published",
+      "columnId": "column-todo"
+    },
+    "O1qAByMoxhHOR-a_guL91": {
+      "id": "O1qAByMoxhHOR-a_guL91",
+      "description": "Optionally deploy your examples to Vercel.",
+      "columnId": "column-todo"
+    },
+    "0499BqWDwJ5cxqtC9Nr82": {
+      "id": "0499BqWDwJ5cxqtC9Nr82",
+      "description": "Feel free to star this template, contribute, and/or sponsor the [`terborepo-template`](https://github.com/md2docx/md2docx-plugin-template) project or my [other open-source work](https://github.com/sponsors/mayank1513)",
+      "columnId": "column-todo"
+    },
+    "IjuAtNquJ4-Ut874rHKIW": {
+      "id": "IjuAtNquJ4-Ut874rHKIW",
+      "description": "You can also fork the [`terborepo-template`](https://github.com/md2docx/md2docx-plugin-template/fork) and add your package to `scripts/featured.json`\n  - If approved, your package will be automatically added to FEATURED.md and also published on the home page of this repo.",
+      "columnId": "column-todo"
+    },
+    "_JiH9RZLmUF5nxD7lBC5B": {
+      "id": "_JiH9RZLmUF5nxD7lBC5B",
+      "description": "Create a new GitHub repository using this template.\n  - Click the `Use this template` button at the top right -> `Create a new repository`\n  - Click `Create repository` and wait for the setup workflow to finish rebranding your repo.",
+      "columnId": "column-done"
+    },
+    "t5d22lVYbF7GuQHzv6DRO": {
+      "id": "t5d22lVYbF7GuQHzv6DRO",
+      "description": "Install and set up Node.js and your IDE (VSCode recommended)",
+      "columnId": "column-done"
+    },
+    "wkDDELNeOfYSVmWI1eWu0": {
+      "id": "wkDDELNeOfYSVmWI1eWu0",
+      "description": "Install the recommended VSCode extensions:\n  - [Trello Kanban](https://marketplace.visualstudio.com/items?itemName=mayank1513.trello-kanban-task-board)",
+      "columnId": "column-done"
+    }
+  },
+  "columns": [
+    {
+      "id": "column-todo",
+      "title": "To do",
+      "tasksIds": [
+        "55DAZwduwTvlaxaJC8hlX",
+        "FDFqCQvLm2mUlnTJ3Gna5",
+        "O1qAByMoxhHOR-a_guL91",
+        "0499BqWDwJ5cxqtC9Nr82",
+        "IjuAtNquJ4-Ut874rHKIW"
+      ]
+    },
+    {
+      "id": "column-doing",
+      "title": "Doing",
+      "tasksIds": []
+    },
+    {
+      "id": "column-done",
+      "title": "Done",
+      "tasksIds": [
+        "_JiH9RZLmUF5nxD7lBC5B",
+        "t5d22lVYbF7GuQHzv6DRO",
+        "wkDDELNeOfYSVmWI1eWu0"
+      ]
+    }
+  ]
+}
