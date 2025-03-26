@@ -12,16 +12,7 @@ import { removePosition } from "unist-util-remove-position";
 // skipcq: JS-R1001
 import demoCode from "./demo.tsx?raw";
 import { useState } from "react";
-// import { remarkDocx } from "@m2d/remark-docx";
-import { toDocx } from "mdast2docx";
-import { emojiPlugin } from "@m2d/emoji";
-import {
-  tablePlugin,
-  listPlugin,
-  mathPlugin,
-  imagePlugin,
-  htmlPlugin,
-} from "mdast2docx/dist/plugins";
+import { remarkDocx } from "@m2d/remark-docx";
 
 /** React live demo */
 export function Demo() {
@@ -36,38 +27,28 @@ export function Demo() {
 
   removePosition(mdast);
 
-  // const docxProcessor = unified()
-  //   .use(remarkParse)
-  //   .use(remarkGfm)
-  //   .use(remarkFrontmatter)
-  //   .use(remarkMath)
-  //   .use(remarkDocx);
+  const docxProcessor = unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkFrontmatter)
+    .use(remarkMath)
+    .use(remarkDocx);
 
   const downloadDocx = () => {
     setLoading(true);
 
-    toDocx(
-      mdast,
-      {},
-      {
-        plugins: [
-          htmlPlugin(),
-          tablePlugin(),
-          listPlugin(),
-          mathPlugin(),
-          emojiPlugin(),
-          imagePlugin(),
-        ],
-      },
-    ).then(blob => {
-      const url = URL.createObjectURL(blob as Blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "my-document.docx";
-      link.click();
-      URL.revokeObjectURL(url);
-      setLoading(false);
-    });
+    docxProcessor
+      .process(md)
+      .then(res => res.result)
+      .then(blob => {
+        const url = URL.createObjectURL(blob as Blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "my-document.docx";
+        link.click();
+        URL.revokeObjectURL(url);
+        setLoading(false);
+      });
   };
 
   // console.log(docxProcessor.processSync(md));
