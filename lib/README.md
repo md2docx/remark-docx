@@ -1,80 +1,219 @@
-# @m2d/remark-docx
+# @m2d/remark-docx <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" height="40"/>
 
-[![test](https://github.com/md2docx/remark-docx/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/remark-docx/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/aa896ec14c570f3bb274/maintainability)](https://codeclimate.com/github/md2docx/remark-docx/maintainability) [![codecov](https://codecov.io/gh/md2docx/remark-docx/graph/badge.svg)](https://codecov.io/gh/md2docx/remark-docx) [![Version](https://img.shields.io/npm/v/@m2d/remark-docx.svg?colorB=green)](https://www.npmjs.com/package/@m2d/remark-docx) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/@m2d/remark-docx.svg)](https://www.npmjs.com/package/@m2d/remark-docx) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@m2d/remark-docx)
+[![test](https://github.com/md2docx/remark-docx/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/remark-docx/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/md2docx/remark-docx/graph/badge.svg)](https://codecov.io/gh/md2docx/remark-docx) [![Version](https://img.shields.io/npm/v/@m2d/remark-docx?color=green)](https://www.npmjs.com/package/@m2d/remark-docx)
+![Downloads](https://img.shields.io/npm/d18m/@m2d/remark-docx)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@m2d/remark-docx)
 
-> Emoji shortcode support for `mdast2docx`
+> A Unified/Remark plugin that injects a DOCX compiler using [`mdast2docx`](https://github.com/md2docx/mdast2docx) and outputs `.docx` files from Markdown.
 
-This plugin adds support for emoji shortcodes (e.g., `:smile:`, `:rocket:`) in your Markdown-to-DOCX conversion pipeline. It replaces recognized emoji shortcodes with their corresponding Unicode characters during the MDAST transformation.
+---
+
+## 🧭 Overview
+
+`@m2d/remark-docx` enables direct export of Markdown content to Microsoft Word (`.docx`) using the Unified ecosystem. It seamlessly bridges `remark` with the [`mdast2docx`](https://github.com/md2docx/mdast2docx) compiler and auto-injects common plugins like GFM tables, math, lists, and inline HTML support.
+
+It’s designed for both **browser** and **Node.js** environments, handling environment-specific features like image or HTML parsing smartly.
 
 ---
 
 ## ✨ Features
 
-- Converts emoji shortcodes to Unicode emojis (e.g., `:tada:` → 🎉)
-- Compatible with [`@m2d/core`](https://www.npmjs.com/package/@m2d/core)
-- Works seamlessly within the `mdast2docx` plugin ecosystem
-- Easy to integrate and lightweight
+- 📄 Converts Markdown to `.docx` using `mdast2docx`
+- 🔌 Auto-injects plugins for GFM tables, math, lists, images, and HTML
+- 🧠 Smart: excludes DOM-only plugins in Node.js
+- 💥 Supports both `.process()` and `.processSync()` with an async `.result`
+- 🔄 Output as `Blob`, `Buffer`, or `base64`
 
 ---
 
 ## 📦 Installation
 
 ```bash
-pnpm install @m2d/remark-docx
+npm install @m2d/remark-docx docx
 ```
 
-**_or_**
+Also install any optional plugins you wish to include in your pipeline:
 
 ```bash
-yarn add @m2d/remark-docx
+npm install remark-parse remark-gfm remark-math remark-frontmatter
 ```
 
-**_or_**
+Other package managers:
 
 ```bash
-npm add @m2d/remark-docx
+yarn add @m2d/remark-docx docx
+pnpm add @m2d/remark-docx docx
 ```
 
 ---
 
-## 🧠 How It Works
+## 🚀 Usage
 
-This plugin scans all text nodes for emoji shortcodes (e.g., `:fire:`, `:sparkles:`) and replaces them with matching Unicode emojis using a predefined emoji JSON mapping.
+### 🔗 Browser Example (Async)
+
+```ts
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import remarkFrontmatter from "remark-frontmatter";
+import { remarkDocx } from "@m2d/remark-docx";
+
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkFrontmatter)
+  .use(remarkMath)
+  .use(remarkDocx);
+
+const downloadDocx = () => {
+  processor
+    .process(md)
+    .then(res => res.result)
+    .then(blob => {
+      const url = URL.createObjectURL(blob as Blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "document.docx";
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+};
+```
+
+### ⚡ Browser Example (Sync + Async Result)
+
+```ts
+const { result } = processor.processSync(md) as { result: Promise<Blob> };
+result.then(blob => {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "document.docx";
+  link.click();
+  URL.revokeObjectURL(url);
+});
+```
 
 ---
 
-## 🔍 Emoji Support
+### 🐢 Node.js Example
 
-It uses the [GitHub-style emoji shortcodes](https://github.com/ikatyang/emoji-cheat-sheet) and more — if a shortcode is not recognized, it will remain unchanged.
+```ts
+import fs from "node:fs";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import remarkFrontmatter from "remark-frontmatter";
+import { remarkDocx } from "@m2d/remark-docx";
+
+const markdown = `
+# Hello DOCX
+
+This is a *Markdown* document with **tables**, math, and more.
+
+| A | B |
+|---|---|
+| 1 | 2 |
+
+Inline math: $x^2 + y^2 = z^2$
+`;
+
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkFrontmatter)
+  .use(remarkMath)
+  .use(remarkDocx, "buffer"); // outputType = "buffer" in Node
+
+const { result } = processor.processSync(markdown) as { result: Promise<Buffer> };
+
+result.then(buffer => {
+  fs.writeFileSync("output.docx", buffer);
+  console.log("✔ DOCX file written: output.docx");
+});
+```
 
 ---
 
-## 🛠️ Development
+## 🧩 Plugin Behavior
+
+By default, these `mdast2docx` plugins are included:
+
+| Plugin        | Description             |
+| ------------- | ----------------------- |
+| `htmlPlugin`  | Parses inline HTML      |
+| `tablePlugin` | GFM table support       |
+| `listPlugin`  | Ordered/unordered lists |
+| `mathPlugin`  | KaTeX math blocks       |
+| `imagePlugin` | Resolves images         |
+
+On **Node.js**, `htmlPlugin` and `imagePlugin` are automatically excluded to avoid DOM dependency issues.
+
+To override this behavior, pass custom plugins using `sectionProps.plugins`.
+
+---
+
+## 📘 API
+
+### `remarkDocx(outputType?, docxProps?, sectionProps?)`
+
+| Param          | Type                                 | Description                         |
+| -------------- | ------------------------------------ | ----------------------------------- |
+| `outputType`   | `"blob"` \| `"buffer"` \| `"base64"` | Default is `"blob"`                 |
+| `docxProps`    | `IDocxProps`                         | Global DOCX config (optional)       |
+| `sectionProps` | `ISectionProps`                      | Section + plugin control (optional) |
+
+Returns a `Processor` where `.result` on `vfile` is a `Promise<Blob | Buffer | string>` depending on the mode.
+
+---
+
+## 🔥 Output Handling
+
+Both `.process()` and `.processSync()` return a `vfile` with a `result` field:
+
+```ts
+const file = await processor.process(md);
+const blobOrBuffer = await file.result;
+```
+
+> This makes the plugin environment-safe and decoupled from internal mutation or I/O.
+
+---
+
+## 🛠 Development
 
 ```bash
-# Clone and install dependencies
-git clone https://github.com/md2docx/emoji-plugin
-cd emoji-plugin
-npm install
-
-# Build / Test / Dev
-npm run build
+npm run dev       # Watch mode
+npm run build     # Compile to /dist
+npm run lint      # Lint source
+npm run test      # Run tests
 ```
 
 ---
 
 ## 📄 License
 
-Licensed under the **MPL-2.0** License.
+Licensed under the [MPL-2.0 License](https://www.mozilla.org/en-US/MPL/2.0/).
 
 ---
 
-## ⭐ Support Us
+## 💖 Sponsors
 
-If you find this useful:
+Support the project & its ecosystem:
 
-- ⭐ Star [mdast2docx](https://github.com/md2docx/mdast2docx) on GitHub
-- ❤️ Consider [sponsoring](https://github.com/sponsors/mayank1513)
+- [@md2docx](https://github.com/sponsors/md2docx)
+- [@mayank1513](https://github.com/sponsors/mayank1513)
+
+---
+
+## 🔗 Related Projects
+
+- [`mdast2docx`](https://github.com/md2docx/mdast2docx) – The DOCX engine
+- [`docx`](https://github.com/dolanmiu/docx) – Low-level DOCX generation
+- [`unified`](https://unifiedjs.com) – Processor pipeline
+- [`remark`](https://github.com/remarkjs/remark) – Markdown parser
 
 ---
 
