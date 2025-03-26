@@ -1,18 +1,17 @@
 import { describe, it } from "vitest";
-import { toDocx } from "@m2d/core"; // Adjust path based on your setup
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import fs from "fs";
-import { remark-docxPlugin } from "../src";
+import { remarkDocx } from "../src";
 
 const markdown = fs.readFileSync("../sample.md", "utf-8");
 
 describe("toDocx", () => {
   it("should handle remark-docxs", async ({ expect }) => {
-    const mdast = unified().use(remarkParse).use(remarkGfm).parse(markdown);
+    const processor = unified().use(remarkParse).use(remarkGfm).use(remarkDocx);
 
-    const docxBlob = await toDocx(mdast, {}, { plugins: [remark-docxPlugin()] });
+    const docxBlob = await processor.process(markdown).then(res => res.result);
 
     expect(docxBlob).toBeInstanceOf(Blob);
   });

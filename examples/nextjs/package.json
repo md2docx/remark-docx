@@ -12,29 +12,29 @@
     "start": "next start"
   },
   "dependencies": {
-    "@m2d/core": "latest",
-    "@m2d/emoji": "latest",
+    "@m2d/core": "^0.0.3",
+    "@m2d/emoji": "^0.1.0",
+    "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
-    "mdast2docx": "0.3.0",
-    "next": "^15.2.3",
+    "mdast2docx": "0.3.5",
+    "next": "^15.2.4",
     "nextjs-darkmode-lite": "^1.0.10",
     "nextjs-themes": "^4.0.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react18-loaders": "latest",
+    "react18-loaders": "^1.1.4",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "remark-parse": "^11.0.0",
     "unified": "^11.0.5",
-    "webgl-generative-particles": "^0.0.1",
-    "@m2d/remark-docx": "workspace:*"
+    "webgl-generative-particles": "^0.0.1"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.2.3",
+    "@next/eslint-plugin-next": "^15.2.4",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.13.12",
+    "@types/node": "^22.13.13",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "typescript": "^5.8.2"
