@@ -53,9 +53,7 @@
     "vitest": "^3.0.9"
   },
   "dependencies": {
-    "mdast2docx": "0.3.5"
-  },
-  "peerDependencies": {
+    "mdast2docx": "0.3.5",
     "docx": "^9.3.0"
   },
   "funding": [
