@@ -34,8 +34,8 @@ importers:
   examples/nextjs:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.3
-        version: 0.0.3(docx@9.3.0)
+        specifier: ^0.0.4
+        version: 0.0.4(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.0
         version: 0.1.0(docx@9.3.0)
@@ -110,8 +110,8 @@ importers:
   examples/vite:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.3
-        version: 0.0.3(docx@9.3.0)
+        specifier: ^0.0.4
+        version: 0.0.4(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.0
         version: 0.1.0(docx@9.3.0)
@@ -270,8 +270,8 @@ importers:
   packages/shared:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.3
-        version: 0.0.3(docx@9.3.0)
+        specifier: ^0.0.4
+        version: 0.0.4(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.0
         version: 0.1.0(docx@9.3.0)
@@ -911,6 +911,11 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
+  '@m2d/core@0.0.4':
+    resolution: {integrity: sha512-2zL8XX3UPXaoC5AswGEixSg82JpEqhVn4vrmHCfVDpToKtH6DWiLDFQIsqKxYae9HlrREffS+gvwdBL+C+KMFw==}
+    peerDependencies:
+      docx: ^9.3.0
+
   '@m2d/emoji@0.1.0':
     resolution: {integrity: sha512-9o4zUGvklus45ERs2lnqTKZK5htntqPVLR9NGWQtB3pinsFWOoMfFv7rGL3bwS1wqIYjWL6Ueyp8ulM8+QLn2g==}
     peerDependencies:
@@ -939,6 +944,11 @@ packages:
 
   '@m2d/mdast@0.0.2':
     resolution: {integrity: sha512-rt3I7maptlrfFn2kY4yKTErDrhFcRoQNobwDQcOdR0i3la66PbZ5D9p0KF20IUsD3p6ExAuZTUt9HKyeQ8jd8g==}
+    peerDependencies:
+      docx: ^9.3.0
+
+  '@m2d/mdast@0.1.1':
+    resolution: {integrity: sha512-K5lsqsaKU8/u3V/29VS3ooX3H1CMemJw4En1F++oXKh4AYJUd+zopa/bYPueFMh/ubafS6iHxZgIT4FIRl+/4Q==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -4257,6 +4267,11 @@ snapshots:
       '@m2d/mdast': 0.0.2(docx@9.3.0)
       docx: 9.3.0
 
+  '@m2d/core@0.0.4(docx@9.3.0)':
+    dependencies:
+      '@m2d/mdast': 0.1.1(docx@9.3.0)
+      docx: 9.3.0
+
   '@m2d/emoji@0.1.0(docx@9.3.0)':
     dependencies:
       '@m2d/core': 0.0.3(docx@9.3.0)
@@ -4285,6 +4300,10 @@ snapshots:
       remark-math: 6.0.0
 
   '@m2d/mdast@0.0.2(docx@9.3.0)':
+    dependencies:
+      docx: 9.3.0
+
+  '@m2d/mdast@0.1.1(docx@9.3.0)':
     dependencies:
       docx: 9.3.0
 
