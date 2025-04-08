@@ -9,6 +9,7 @@ import {
   listPlugin,
   mathPlugin,
   emojiPlugin,
+  mermaidPlugin,
 } from "mdast2docx/dist/plugins";
 
 /**
@@ -17,6 +18,7 @@ import {
  */
 const defaultPlugins = [
   htmlPlugin(),
+  mermaidPlugin(),
   tablePlugin(),
   listPlugin(),
   mathPlugin(),
@@ -43,7 +45,7 @@ export const remarkDocx: Plugin<
     if (!sectionProps.plugins) {
       sectionProps.plugins =
         typeof window === "undefined"
-          ? defaultPlugins.slice(1, -1) // server-side: skip html & image plugins
+          ? defaultPlugins.slice(2, -1) // server-side: skip html & image plugins
           : defaultPlugins;
     }
 
