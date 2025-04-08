@@ -2,7 +2,7 @@
   "name": "@m2d/remark-docx",
   "author": "Mayank Kumar Chaudhari (https://mayank-chaudhari.vercel.app)",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A unified plugin to prepare MDAST trees for DOCX conversion using mdast2docx.",
   "license": "MPL-2.0",
   "main": "./dist/index.js",
