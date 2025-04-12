@@ -12,11 +12,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@m2d/core": "^0.0.4",
+    "@m2d/core": "^0.0.5",
     "@m2d/emoji": "^0.1.1",
     "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
-    "mdast2docx": "0.4.1",
+    "mdast2docx": "0.4.3",
     "next": "^15.3.0",
     "nextjs-darkmode-lite": "^1.0.10",
     "nextjs-themes": "^4.0.6",

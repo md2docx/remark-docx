@@ -34,8 +34,8 @@ importers:
   examples/nextjs:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.4
-        version: 0.0.4(docx@9.3.0)
+        specifier: ^0.0.5
+        version: 0.0.5(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.1
         version: 0.1.1(docx@9.3.0)
@@ -46,8 +46,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 0.4.1
-        version: 0.4.1(remark-math@6.0.0)
+        specifier: 0.4.3
+        version: 0.4.3(remark-math@6.0.0)
       next:
         specifier: ^15.3.0
         version: 15.3.0(@babel/core@7.26.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3)
@@ -110,8 +110,8 @@ importers:
   examples/vite:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.4
-        version: 0.0.4(docx@9.3.0)
+        specifier: ^0.0.5
+        version: 0.0.5(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.1
         version: 0.1.1(docx@9.3.0)
@@ -168,8 +168,8 @@ importers:
         specifier: ^9.3.0
         version: 9.3.0
       mdast2docx:
-        specifier: 0.4.1
-        version: 0.4.1(remark-math@6.0.0)
+        specifier: 0.4.3
+        version: 0.4.3(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -270,8 +270,8 @@ importers:
   packages/shared:
     dependencies:
       '@m2d/core':
-        specifier: ^0.0.4
-        version: 0.0.4(docx@9.3.0)
+        specifier: ^0.0.5
+        version: 0.0.5(docx@9.3.0)
       '@m2d/emoji':
         specifier: ^0.1.1
         version: 0.1.1(docx@9.3.0)
@@ -288,8 +288,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       mdast2docx:
-        specifier: 0.4.1
-        version: 0.4.1(remark-math@6.0.0)
+        specifier: 0.4.3
+        version: 0.4.3(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.1)(react@19.1.0)
@@ -584,8 +584,8 @@ packages:
     resolution: {integrity: sha512-UJnjoFsmxfKUdNYdWgOB0mWUypuLvAfQPH1+pyvRJs6euowbFkFC6P13w1l8mJyi3vxYMxc9kld5jZEGRQs6bw==}
     engines: {node: '>=18'}
 
-  '@emnapi/runtime@1.4.0':
-    resolution: {integrity: sha512-64WYIf4UYcdLnbKn/umDlNjQDSS8AgZrI/R9+x5ilkUVFxXcA1Ebl+gQLc/6mERA4407Xof0R7wEyEuj091CVw==}
+  '@emnapi/runtime@1.4.1':
+    resolution: {integrity: sha512-LMshMVP0ZhACNjQNYXiU1iZJ6QCcv0lUdPDPugqGvCGXt5xtRVBPdtA0qU12pEXZzpWAhWlZYptfdAFq10DOVQ==}
 
   '@esbuild/aix-ppc64@0.25.2':
     resolution: {integrity: sha512-wCIboOL2yXZym2cgm6mlA742s9QeJ8DjGVaL39dLN4rRwrOgOyYSnOaFPhKZGLb2ngj4EyfAFjsNJwPXZvseag==}
@@ -946,6 +946,11 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
+  '@m2d/core@0.0.5':
+    resolution: {integrity: sha512-ZLfKsVDOfWdS6ef5yyu8LrfPwlA56qEjKGnJ4HrVBTCLW2VO3fXeh3RK5K7bstGD2TF664xXwW5Htc7k8Mj9+Q==}
+    peerDependencies:
+      docx: ^9.3.0
+
   '@m2d/emoji@0.1.1':
     resolution: {integrity: sha512-RoymqC+Dp8FAyXd41ENdmwQiMZQz+tLRUKjbYftwUQnVb3523f8hN/C15152BIqXMVKG6mfbeTDNPl6jFjlV3Q==}
     peerDependencies:
@@ -956,13 +961,13 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/image@0.1.1':
-    resolution: {integrity: sha512-eu1pWP7TIohmDqzSdN0KIlOBilfNBjoFwhyxSfJOsCV6H4D4C+kZaautgeDK6hMT+X5kRpcfUMq7R+bDcl6ISw==}
+  '@m2d/image@0.2.2':
+    resolution: {integrity: sha512-cvWfXw/ZiJtoGYU9ovbInHCAWx11nOqp+nWja3xJstH9Edam7QHVDe5yRjRZD+Yqc5K2USiAHSlg5cSYGK4DZw==}
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/list@0.0.4':
-    resolution: {integrity: sha512-Wkzy0kQxHfqvpcth6W+kgwactrqycp9ndqKYkgzz7hGRSJ99s5+g9nGpaULyBqfA4aflhdNtE2spJaHpFZlQzg==}
+  '@m2d/list@0.0.5':
+    resolution: {integrity: sha512-J+QaUZJsBOBwDIo3fiB+giAhcqVJn0vCZrLr7c+7Y063ztyZBt6tRjZ3R7tiE4WS4FZB6eBvhsufgwFV8pWDYw==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -972,13 +977,13 @@ packages:
       docx: ^9.3.0
       remark-math: ^6.0.0
 
-  '@m2d/mdast@0.1.1':
-    resolution: {integrity: sha512-K5lsqsaKU8/u3V/29VS3ooX3H1CMemJw4En1F++oXKh4AYJUd+zopa/bYPueFMh/ubafS6iHxZgIT4FIRl+/4Q==}
+  '@m2d/mdast@0.1.2':
+    resolution: {integrity: sha512-CW+MrQvDF12bZxbHIkUWJwIB+r/IXkm8r4CRz/PDhlHhj03aZw84rW4feRC8w/cZBCZMZl3LSdCXfiUGoX7L4w==}
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/mermaid@0.0.2':
-    resolution: {integrity: sha512-ZZon45Ctm6DFqwmn5xFJZi7pzL5KMr3+Rz8eASEg9YLd48dG0nDQ7q3hRXcbesNrLDxa9o8zcltn7+YRtwNjCg==}
+  '@m2d/mermaid@0.0.3':
+    resolution: {integrity: sha512-iBjacHv/UTSb/wkfsToralVAw4Eke3gxOXtLtYUuL7n5nN25Nd8r67vqO4nrX76vAro1zglYbihVMJRh2fDRUA==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -2874,8 +2879,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@0.4.1:
-    resolution: {integrity: sha512-5fBTAkQuABwPpUya2ypoBEDjVHE/N8Am+AJJUowA9g1oC36YX3gVq5LM3owIM03pUjzIiBIOU9tOtwdXvf/5Bg==}
+  mdast2docx@0.4.3:
+    resolution: {integrity: sha512-Yp8KfYKQRbAInzcWsmxUKI/JhsL7LkYqtcirWvCvH8DI0WVQV+GZLRlvA1hWVeMKT5o2hRtxBTibS67jmX+G5w==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -3733,11 +3738,11 @@ packages:
     resolution: {integrity: sha512-n1cw8k1k0x4pgA2+9XrOkFydTerNcJ1zWCO5Nn9scWHTD+5tp8dghT2x1uduQePZTZgd3Tupf+x9BxJjeJi77Q==}
     engines: {node: '>=14.0.0'}
 
-  tldts-core@6.1.85:
-    resolution: {integrity: sha512-DTjUVvxckL1fIoPSb3KE7ISNtkWSawZdpfxGxwiIrZoO6EbHVDXXUIlIuWympPaeS+BLGyggozX/HTMsRAdsoA==}
+  tldts-core@6.1.86:
+    resolution: {integrity: sha512-Je6p7pkk+KMzMv2XXKmAE3McmolOQFdxkKw0R8EYNr7sELW46JqnNeTX8ybPiQgvg1ymCoF8LXs5fzFaZvJPTA==}
 
-  tldts@6.1.85:
-    resolution: {integrity: sha512-gBdZ1RjCSevRPFix/hpaUWeak2/RNUZB4/8frF1r5uYMHjFptkiT0JXIebWvgI/0ZHXvxaUDDJshiA0j6GdL3w==}
+  tldts@6.1.86:
+    resolution: {integrity: sha512-WMi/OQ2axVTf/ykqCQgXiIct+mSQDFdH2fkwhPwgEwvJ1kSzZRiinb0zF2Xb8u4+OqPChmyI6MEu4EezNJz+FQ==}
     hasBin: true
 
   tmp@0.0.33:
@@ -4474,7 +4479,7 @@ snapshots:
 
   '@csstools/css-tokenizer@3.0.3': {}
 
-  '@emnapi/runtime@1.4.0':
+  '@emnapi/runtime@1.4.1':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -4699,7 +4704,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.34.1':
     dependencies:
-      '@emnapi/runtime': 1.4.0
+      '@emnapi/runtime': 1.4.1
     optional: true
 
   '@img/sharp-win32-ia32@0.34.1':
@@ -4738,7 +4743,12 @@ snapshots:
 
   '@m2d/core@0.0.4(docx@9.3.0)':
     dependencies:
-      '@m2d/mdast': 0.1.1(docx@9.3.0)
+      '@m2d/mdast': 0.1.2(docx@9.3.0)
+      docx: 9.3.0
+
+  '@m2d/core@0.0.5(docx@9.3.0)':
+    dependencies:
+      '@m2d/mdast': 0.1.2(docx@9.3.0)
       docx: 9.3.0
 
   '@m2d/emoji@0.1.1(docx@9.3.0)':
@@ -4751,12 +4761,12 @@ snapshots:
       '@m2d/core': 0.0.4(docx@9.3.0)
       docx: 9.3.0
 
-  '@m2d/image@0.1.1(docx@9.3.0)':
+  '@m2d/image@0.2.2(docx@9.3.0)':
     dependencies:
       '@m2d/core': 0.0.4(docx@9.3.0)
       docx: 9.3.0
 
-  '@m2d/list@0.0.4(docx@9.3.0)':
+  '@m2d/list@0.0.5(docx@9.3.0)':
     dependencies:
       '@m2d/core': 0.0.4(docx@9.3.0)
       docx: 9.3.0
@@ -4768,13 +4778,13 @@ snapshots:
       latex-math: 0.0.2
       remark-math: 6.0.0
 
-  '@m2d/mdast@0.1.1(docx@9.3.0)':
+  '@m2d/mdast@0.1.2(docx@9.3.0)':
     dependencies:
       docx: 9.3.0
 
-  '@m2d/mermaid@0.0.2(docx@9.3.0)':
+  '@m2d/mermaid@0.0.3(docx@9.3.0)':
     dependencies:
-      '@m2d/core': 0.0.4(docx@9.3.0)
+      '@m2d/core': 0.0.5(docx@9.3.0)
       docx: 9.3.0
       mermaid: 11.6.0
     transitivePeerDependencies:
@@ -6935,15 +6945,15 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@0.4.1(remark-math@6.0.0):
+  mdast2docx@0.4.3(remark-math@6.0.0):
     dependencies:
-      '@m2d/core': 0.0.4(docx@9.3.0)
+      '@m2d/core': 0.0.5(docx@9.3.0)
       '@m2d/emoji': 0.1.1(docx@9.3.0)
       '@m2d/html': 1.0.0(docx@9.3.0)
-      '@m2d/image': 0.1.1(docx@9.3.0)
-      '@m2d/list': 0.0.4(docx@9.3.0)
+      '@m2d/image': 0.2.2(docx@9.3.0)
+      '@m2d/list': 0.0.5(docx@9.3.0)
       '@m2d/math': 0.0.4(docx@9.3.0)(remark-math@6.0.0)
-      '@m2d/mermaid': 0.0.2(docx@9.3.0)
+      '@m2d/mermaid': 0.0.3(docx@9.3.0)
       '@m2d/table': 0.0.4(docx@9.3.0)
       docx: 9.3.0
     transitivePeerDependencies:
@@ -8025,11 +8035,11 @@ snapshots:
 
   tinyspy@3.0.2: {}
 
-  tldts-core@6.1.85: {}
+  tldts-core@6.1.86: {}
 
-  tldts@6.1.85:
+  tldts@6.1.86:
     dependencies:
-      tldts-core: 6.1.85
+      tldts-core: 6.1.86
 
   tmp@0.0.33:
     dependencies:
@@ -8041,7 +8051,7 @@ snapshots:
 
   tough-cookie@5.1.2:
     dependencies:
-      tldts: 6.1.85
+      tldts: 6.1.86
 
   tr46@1.0.1:
     dependencies:

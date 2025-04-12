@@ -12,7 +12,7 @@
     "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
-    "@m2d/core": "^0.0.4",
+    "@m2d/core": "^0.0.5",
     "@m2d/emoji": "^0.1.1",
     "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
