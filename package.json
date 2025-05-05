@@ -17,7 +17,7 @@
     "format"
   ],
   "devDependencies": {
-    "@changesets/cli": "^2.29.2",
+    "@changesets/cli": "^2.29.3",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
     "prettier": "^3.5.3",
