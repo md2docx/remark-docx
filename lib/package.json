@@ -46,7 +46,7 @@
     "jsdom": "^26.1.0",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "unified": "^11.0.5",
     "vite-tsconfig-paths": "^5.1.4",
