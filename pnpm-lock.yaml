@@ -46,8 +46,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.0.0
-        version: 1.0.0(remark-math@6.0.0)
+        specifier: 1.1.0
+        version: 1.1.0(remark-math@6.0.0)
       next:
         specifier: ^15.3.3
         version: 15.3.3(@babel/core@7.27.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.1)
@@ -168,8 +168,8 @@ importers:
         specifier: ^9.5.0
         version: 9.5.0
       mdast2docx:
-        specifier: 1.0.0
-        version: 1.0.0(remark-math@6.0.0)
+        specifier: 1.1.0
+        version: 1.1.0(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -288,8 +288,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       mdast2docx:
-        specifier: 1.0.0
-        version: 1.0.0(remark-math@6.0.0)
+        specifier: 1.1.0
+        version: 1.1.0(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.6)(react@19.1.0)
@@ -963,8 +963,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/list@0.0.6':
-    resolution: {integrity: sha512-QbbazToUiJbXbMR73N60ZE0uxpZJkIV8C8+Bn9RXc5SPDbhHMdDBhFJsIBeGtJMApsXMKTvmLVzwvUl9lC6G0w==}
+  '@m2d/list@0.0.7':
+    resolution: {integrity: sha512-3a75So7pwhyu6Oz2Kh0iDiTuHwk+I+Y4x81coFtxG94nB++KGtcOJuzOJco/Ko3yMyho6itN2mw5vHydXcHW5A==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -979,13 +979,13 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/mermaid@1.1.2':
-    resolution: {integrity: sha512-X6JUD+75q1dH5VGei/mzRrbSxIO84q8v7Hzyr0TidvRkdl/nQ9xgl6OVVrIJTIBv2y7GDcUy5ooB6TvBtmCUwQ==}
+  '@m2d/mermaid@1.1.3':
+    resolution: {integrity: sha512-51HldwChnsA0SxkbXeERXyQ9A6/WwCLzdi73j32gXXIsW3cOva95dxQoYkNDOqvPJt/GHm7WnWJH73M1YCGz/w==}
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/table@0.0.5':
-    resolution: {integrity: sha512-exKjrHsibhJmjDASjnBMYETBfudo4Swnty6ZQdw9XbduS0W/eqpr6vk/BgErhMDy6O1qKM2FHpAA4wCvx6s4lQ==}
+  '@m2d/table@0.0.6':
+    resolution: {integrity: sha512-9Z28Poa9naXsiTquWz2m6jAkYWPf346t3s8vu/RcBxiFIdDSA7AaKlpE65/gKJBblMPoZ55HMZW4JGHWrfU+sw==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -2490,8 +2490,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  ignore@7.0.4:
-    resolution: {integrity: sha512-gJzzk+PQNznz8ysRrC0aOkBNVRBDtE1n53IqyqEf3PXrYwomFs5q4pGMizBMJF+ykh03insJ27hB8gSrD2Hn8A==}
+  ignore@7.0.5:
+    resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
 
   immediate@3.0.6:
@@ -2885,8 +2885,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.0.0:
-    resolution: {integrity: sha512-+4mheVkwE4cLyZjHcDYugleLqullB4dr3pB+eH7+vsi3dfZYJ3U/GUM98Dge4sLXgCpW5cW0TBQK++je4g83hw==}
+  mdast2docx@1.1.0:
+    resolution: {integrity: sha512-Se1YyOQtjW74qypmKIdkI1l71X5lSK5zOzVtoIYQRJX3cmZ1JF4iz6pde4DmIMR6k9m8WiX/ffrTnz+744UTTw==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -3731,8 +3731,8 @@ packages:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
     engines: {node: '>=12.0.0'}
 
-  tinypool@1.0.2:
-    resolution: {integrity: sha512-al6n+QEANGFOMf/dmUMsuS5/r9B06uwlyNjZZql/zv8J7ybHCgoihBNORZCY2mzUuAnomQa2JdhyHKzZxPCrFA==}
+  tinypool@1.1.0:
+    resolution: {integrity: sha512-7CotroY9a8DKsKprEy/a14aCCm8jYVmR7aFy4fpkZM8sdpNJbKkixuNjgM50yCmip2ezc8z4N7k3oe2+rfRJCQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
   tinyrainbow@2.0.0:
@@ -4763,7 +4763,7 @@ snapshots:
       '@m2d/core': 1.1.6(docx@9.5.0)
       docx: 9.5.0
 
-  '@m2d/list@0.0.6(docx@9.5.0)':
+  '@m2d/list@0.0.7(docx@9.5.0)':
     dependencies:
       '@m2d/core': 1.1.6(docx@9.5.0)
       docx: 9.5.0
@@ -4779,7 +4779,7 @@ snapshots:
     dependencies:
       docx: 9.5.0
 
-  '@m2d/mermaid@1.1.2(docx@9.5.0)':
+  '@m2d/mermaid@1.1.3(docx@9.5.0)':
     dependencies:
       '@m2d/core': 1.1.6(docx@9.5.0)
       docx: 9.5.0
@@ -4787,7 +4787,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@m2d/table@0.0.5(docx@9.5.0)':
+  '@m2d/table@0.0.6(docx@9.5.0)':
     dependencies:
       '@m2d/core': 1.1.6(docx@9.5.0)
       docx: 9.5.0
@@ -5207,7 +5207,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.33.0
       eslint: 9.28.0
       graphemer: 1.4.0
-      ignore: 7.0.4
+      ignore: 7.0.5
       natural-compare: 1.4.0
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
@@ -6470,7 +6470,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  ignore@7.0.4: {}
+  ignore@7.0.5: {}
 
   immediate@3.0.6: {}
 
@@ -6957,16 +6957,16 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.0.0(remark-math@6.0.0):
+  mdast2docx@1.1.0(remark-math@6.0.0):
     dependencies:
       '@m2d/core': 1.1.6(docx@9.5.0)
       '@m2d/emoji': 0.1.2(docx@9.5.0)
       '@m2d/html': 1.0.3(docx@9.5.0)
       '@m2d/image': 1.1.1(docx@9.5.0)
-      '@m2d/list': 0.0.6(docx@9.5.0)
+      '@m2d/list': 0.0.7(docx@9.5.0)
       '@m2d/math': 0.0.5(docx@9.5.0)(remark-math@6.0.0)
-      '@m2d/mermaid': 1.1.2(docx@9.5.0)
-      '@m2d/table': 0.0.5(docx@9.5.0)
+      '@m2d/mermaid': 1.1.3(docx@9.5.0)
+      '@m2d/table': 0.0.6(docx@9.5.0)
       docx: 9.5.0
     transitivePeerDependencies:
       - remark-math
@@ -8043,7 +8043,7 @@ snapshots:
       fdir: 6.4.5(picomatch@4.0.2)
       picomatch: 4.0.2
 
-  tinypool@1.0.2: {}
+  tinypool@1.1.0: {}
 
   tinyrainbow@2.0.0: {}
 
@@ -8338,7 +8338,7 @@ snapshots:
       tinybench: 2.9.0
       tinyexec: 0.3.2
       tinyglobby: 0.2.14
-      tinypool: 1.0.2
+      tinypool: 1.1.0
       tinyrainbow: 2.0.0
       vite: 6.3.5(@types/node@22.15.29)(sass@1.89.1)(yaml@2.7.0)
       vite-node: 3.1.4(@types/node@22.15.29)(sass@1.89.1)(yaml@2.7.0)
