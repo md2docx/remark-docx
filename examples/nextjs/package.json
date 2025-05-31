@@ -12,12 +12,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@m2d/core": "^1.0.1",
-    "@m2d/emoji": "^0.1.1",
+    "@m2d/core": "^1.1.6",
+    "@m2d/emoji": "^0.1.2",
     "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
-    "mdast2docx": "0.4.3",
-    "next": "^15.3.2",
+    "mdast2docx": "1.0.0",
+    "next": "^15.3.3",
     "nextjs-darkmode-lite": "^1.0.10",
     "nextjs-themes": "^4.0.6",
     "react": "^19.1.0",
@@ -31,11 +31,11 @@
     "webgl-generative-particles": "^0.0.1"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.3.2",
+    "@next/eslint-plugin-next": "^15.3.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.15.19",
-    "@types/react": "^19.1.4",
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "typescript": "^5.8.3"
   }

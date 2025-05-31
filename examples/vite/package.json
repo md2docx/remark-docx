@@ -12,8 +12,8 @@
     "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
-    "@m2d/core": "^1.0.1",
-    "@m2d/emoji": "^0.1.1",
+    "@m2d/core": "^1.1.6",
+    "@m2d/emoji": "^0.1.2",
     "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
     "nextjs-darkmode": "^1.0.10",
@@ -26,9 +26,9 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/react": "^19.1.4",
+    "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.4.1",
+    "@vitejs/plugin-react": "^4.5.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   }
