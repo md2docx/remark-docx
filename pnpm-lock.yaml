@@ -46,8 +46,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.1.0
-        version: 1.1.0(remark-math@6.0.0)
+        specifier: 1.2.0
+        version: 1.2.0(remark-math@6.0.0)
       next:
         specifier: ^15.3.3
         version: 15.3.3(@babel/core@7.27.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.1)
@@ -168,8 +168,8 @@ importers:
         specifier: ^9.5.0
         version: 9.5.0
       mdast2docx:
-        specifier: 1.1.0
-        version: 1.1.0(remark-math@6.0.0)
+        specifier: 1.2.0
+        version: 1.2.0(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -288,8 +288,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       mdast2docx:
-        specifier: 1.1.0
-        version: 1.1.0(remark-math@6.0.0)
+        specifier: 1.2.0
+        version: 1.2.0(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.6)(react@19.1.0)
@@ -958,8 +958,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/image@1.1.2':
-    resolution: {integrity: sha512-57cB6c522oY8w+tPpJMh5dJqI3RylM0iVTpG23KImfYAXPyOlq7MxP2+9zy+O4JF8jMrr1Wzs9bbJuqBZaCLaw==}
+  '@m2d/image@1.2.0':
+    resolution: {integrity: sha512-sR7+8N7xqGbvsn4n4hgEsekIHRbeS6D08hu8A2Q/5SRAk++XqKhHXPqqAQNYltmpQRMJekzwO7ozYxaNzF1uzA==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -1601,8 +1601,8 @@ packages:
     resolution: {integrity: sha512-LHE+8BuR7RYGDKvnrmcuSq3tDcKv9OFEXQt/HpbZhY7V6h0zlUXutnAD82GiFx9rdieCMjkvtcsPqBwgUl1Iiw==}
     engines: {node: '>= 0.4'}
 
-  array-includes@3.1.8:
-    resolution: {integrity: sha512-itaWrbYbqpGXkGhZPGUulwnhVf5Hpy1xiCFsGqyIGglbBxmG5vSjxQen3/WGOjPpNEv1RtBLKxbmVXm8HpJStQ==}
+  array-includes@3.1.9:
+    resolution: {integrity: sha512-FmeCCAenzH0KH381SPT5FZmiA/TmpndpcaShhfgEN9eCVjnFBqq3l1xrI42y8+PPLI6hypzou4GXw00WHmPBLQ==}
     engines: {node: '>= 0.4'}
 
   array-union@2.1.0:
@@ -2885,8 +2885,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.1.0:
-    resolution: {integrity: sha512-Se1YyOQtjW74qypmKIdkI1l71X5lSK5zOzVtoIYQRJX3cmZ1JF4iz6pde4DmIMR6k9m8WiX/ffrTnz+744UTTw==}
+  mdast2docx@1.2.0:
+    resolution: {integrity: sha512-TmZ0bZeDaf1tuL5pnJiSRzxW8tRMdH8dt4uMNHH+HplpEMn09m4c9GNhapTF75CEwGpcMB+guQlHqfgoxEywOg==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -4758,7 +4758,7 @@ snapshots:
       '@m2d/core': 1.2.0(docx@9.5.0)
       docx: 9.5.0
 
-  '@m2d/image@1.1.2(docx@9.5.0)':
+  '@m2d/image@1.2.0(docx@9.5.0)':
     dependencies:
       '@m2d/core': 1.2.0(docx@9.5.0)
       docx: 9.5.0
@@ -5405,14 +5405,16 @@ snapshots:
       call-bound: 1.0.4
       is-array-buffer: 3.0.5
 
-  array-includes@3.1.8:
+  array-includes@3.1.9:
     dependencies:
       call-bind: 1.0.8
+      call-bound: 1.0.4
       define-properties: 1.2.1
       es-abstract: 1.24.0
       es-object-atoms: 1.1.1
       get-intrinsic: 1.3.0
       is-string: 1.1.1
+      math-intrinsics: 1.1.0
 
   array-union@2.1.0: {}
 
@@ -6109,7 +6111,7 @@ snapshots:
 
   eslint-plugin-react@7.37.5(eslint@9.28.0):
     dependencies:
-      array-includes: 3.1.8
+      array-includes: 3.1.9
       array.prototype.findlast: 1.2.5
       array.prototype.flatmap: 1.3.3
       array.prototype.tosorted: 1.1.4
@@ -6715,7 +6717,7 @@ snapshots:
 
   jsx-ast-utils@3.3.5:
     dependencies:
-      array-includes: 3.1.8
+      array-includes: 3.1.9
       array.prototype.flat: 1.3.3
       object.assign: 4.1.7
       object.values: 1.2.1
@@ -6957,12 +6959,12 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.1.0(remark-math@6.0.0):
+  mdast2docx@1.2.0(remark-math@6.0.0):
     dependencies:
       '@m2d/core': 1.2.0(docx@9.5.0)
       '@m2d/emoji': 0.1.2(docx@9.5.0)
       '@m2d/html': 1.0.3(docx@9.5.0)
-      '@m2d/image': 1.1.2(docx@9.5.0)
+      '@m2d/image': 1.2.0(docx@9.5.0)
       '@m2d/list': 0.0.7(docx@9.5.0)
       '@m2d/math': 0.0.5(docx@9.5.0)(remark-math@6.0.0)
       '@m2d/mermaid': 1.1.4(docx@9.5.0)

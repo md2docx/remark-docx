@@ -16,7 +16,7 @@
     "@m2d/emoji": "^0.1.2",
     "@m2d/remark-docx": "workspace:*",
     "@repo/shared": "workspace:*",
-    "mdast2docx": "1.1.0",
+    "mdast2docx": "1.2.0",
     "next": "^15.3.3",
     "nextjs-darkmode-lite": "^1.0.10",
     "nextjs-themes": "^4.0.6",
