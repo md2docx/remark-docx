@@ -46,8 +46,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.3.1
-        version: 1.3.1(remark-math@6.0.0)
+        specifier: 1.3.5
+        version: 1.3.5(remark-math@6.0.0)
       next:
         specifier: ^15.3.3
         version: 15.3.3(@babel/core@7.27.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2)
@@ -168,8 +168,8 @@ importers:
         specifier: ^9.5.1
         version: 9.5.1
       mdast2docx:
-        specifier: 1.3.1
-        version: 1.3.1(remark-math@6.0.0)
+        specifier: 1.3.5
+        version: 1.3.5(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -288,8 +288,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       mdast2docx:
-        specifier: 1.3.1
-        version: 1.3.1(remark-math@6.0.0)
+        specifier: 1.3.5
+        version: 1.3.5(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.8)(react@19.1.0)
@@ -957,8 +957,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/html@1.1.3':
-    resolution: {integrity: sha512-eLKx/ZWM3+/K+9DGW1NxYhhSAEB7t68O6yoJAr6Pk37kcOvr3i9Z6pCVBfb5bFgkDoL3jEJH0ik4oqvGN0iWJQ==}
+  '@m2d/html@1.1.7':
+    resolution: {integrity: sha512-8GxchfhUoAb1c4/93wscxfd0uMUlK+RbHrMHln3QPs0uNiMx6OlSjuArE4udPVagMJ1UZ6bGYDDCBY5Zafj92w==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -972,8 +972,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/math@0.0.5':
-    resolution: {integrity: sha512-PH/Z08C1zDYCjMPePIdt3aGS8I+JmL8vWlu0u6eAFgYGv7kiMvSJmve2tHAV5BToy/E4Fr+fXmxEmw2b29zyyw==}
+  '@m2d/math@0.0.6':
+    resolution: {integrity: sha512-KEmCT6UXUiBZVt7Rp6XDq4nPjrs1LM7J3bJA8/MphyEaIRL8mYyUC/3pKVqzNd4Pf9+/DwarWdON1VLwA6wKsg==}
     peerDependencies:
       docx: ^9.3.0
       remark-math: ^6.0.0
@@ -2906,8 +2906,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.3.1:
-    resolution: {integrity: sha512-enMQnR6y3MCzt3Zm5dscW9w9QyO9Q/lj1NeGHaA3BS6gNkD6R7rWvhxmxTqvvNEJjeSViPAHWuQa/klNreyqYQ==}
+  mdast2docx@1.3.5:
+    resolution: {integrity: sha512-28fVWVUv7P7emi7qP88typg/P/Ue2jxsyycN3DaA+CJ84s0WG/8ft9QZ8qzw3/PEqXGtRJBI03Z5oTyLpzYuNg==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -4781,7 +4781,7 @@ snapshots:
       '@m2d/core': 1.4.2(docx@9.5.1)
       docx: 9.5.1
 
-  '@m2d/html@1.1.3(docx@9.5.1)':
+  '@m2d/html@1.1.7(docx@9.5.1)':
     dependencies:
       '@m2d/core': 1.4.2(docx@9.5.1)
       docx: 9.5.1
@@ -4796,7 +4796,7 @@ snapshots:
       '@m2d/core': 1.4.2(docx@9.5.1)
       docx: 9.5.1
 
-  '@m2d/math@0.0.5(docx@9.5.1)(remark-math@6.0.0)':
+  '@m2d/math@0.0.6(docx@9.5.1)(remark-math@6.0.0)':
     dependencies:
       '@m2d/core': 1.4.2(docx@9.5.1)
       docx: 9.5.1
@@ -7006,14 +7006,14 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.3.1(remark-math@6.0.0):
+  mdast2docx@1.3.5(remark-math@6.0.0):
     dependencies:
       '@m2d/core': 1.4.2(docx@9.5.1)
       '@m2d/emoji': 0.1.3(docx@9.5.1)
-      '@m2d/html': 1.1.3(docx@9.5.1)
+      '@m2d/html': 1.1.7(docx@9.5.1)
       '@m2d/image': 1.3.1(docx@9.5.1)
       '@m2d/list': 0.0.8(docx@9.5.1)
-      '@m2d/math': 0.0.5(docx@9.5.1)(remark-math@6.0.0)
+      '@m2d/math': 0.0.6(docx@9.5.1)(remark-math@6.0.0)
       '@m2d/mermaid': 1.2.2(docx@9.5.1)
       '@m2d/table': 0.0.6(docx@9.5.1)
       docx: 9.5.1
