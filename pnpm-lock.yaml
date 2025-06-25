@@ -25,8 +25,8 @@ importers:
         specifier: ^24.0.4
         version: 24.0.4
       prettier:
-        specifier: ^3.6.0
-        version: 3.6.0
+        specifier: ^3.6.1
+        version: 3.6.1
       turbo:
         specifier: ^2.5.4
         version: 2.5.4
@@ -46,8 +46,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.4.0
-        version: 1.4.0(remark-math@6.0.0)
+        specifier: 1.4.1
+        version: 1.4.1(remark-math@6.0.0)
       next:
         specifier: ^15.3.4
         version: 15.3.4(@babel/core@7.27.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2)
@@ -168,8 +168,8 @@ importers:
         specifier: ^9.5.1
         version: 9.5.1
       mdast2docx:
-        specifier: 1.4.0
-        version: 1.4.0(remark-math@6.0.0)
+        specifier: 1.4.1
+        version: 1.4.1(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -288,8 +288,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       mdast2docx:
-        specifier: 1.4.0
-        version: 1.4.0(remark-math@6.0.0)
+        specifier: 1.4.1
+        version: 1.4.1(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.8)(react@19.1.0)
@@ -957,8 +957,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/html@1.1.7':
-    resolution: {integrity: sha512-8GxchfhUoAb1c4/93wscxfd0uMUlK+RbHrMHln3QPs0uNiMx6OlSjuArE4udPVagMJ1UZ6bGYDDCBY5Zafj92w==}
+  '@m2d/html@1.1.8':
+    resolution: {integrity: sha512-5TtCneY+IUWrQJx0HE5c8NBB2HJif+9AezY1xBawN9/jEdP14r5bHJpu7YWkCEr9S5+6OCkop8/ob+r11iLswA==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -1721,8 +1721,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001724:
-    resolution: {integrity: sha512-WqJo7p0TbHDOythNTqYujmaJTvtYRZrjpP8TCvH6Vb9CYJerJNKamKzIWOM4BkQatWj9H2lYulpdAQNBe7QhNA==}
+  caniuse-lite@1.0.30001726:
+    resolution: {integrity: sha512-VQAUIUzBiZ/UnlM28fSp2CRF3ivUn1BWEvxMcVTNwpw91Py1pGbPIyIKtd+tzct9C3ouceCVdGAXxZOpZAsgdw==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1832,8 +1832,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  cssstyle@4.5.0:
-    resolution: {integrity: sha512-/7gw8TGrvH/0g564EnhgFZogTMVe+lifpB7LWU+PEsiq5o83TUXR3fDbzTRXOJhoJwck5IS9ez3Em5LNMMO2aw==}
+  cssstyle@4.6.0:
+    resolution: {integrity: sha512-2z+rWdzbbSZv6/rhtvzvqeZQHrBaqgogqt85sqFNbabZOuFbCVFb8kPeEtZjiKkbrm395irpNKiYeFeLiQnFPg==}
     engines: {node: '>=18'}
 
   csstype@3.1.3:
@@ -2903,8 +2903,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.4.0:
-    resolution: {integrity: sha512-8iB0TCAXe5Jqy5jeqN6bg/wagjulu6tyjKi/GfJZ90+tFqSUK90uLRu1OnzFtYDmfFCB57EAqUU2E3GaDOr7sA==}
+  mdast2docx@1.4.1:
+    resolution: {integrity: sha512-A9Cxey+G8hMRkdUuMPNMg5yp09W3CQicLjd4TZMIOtCDQH6rm8FkADLH1c8Z189j/hGndhOozOGx3N+PnxIyYg==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -3336,8 +3336,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.6.0:
-    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
+  prettier@3.6.1:
+    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4778,7 +4778,7 @@ snapshots:
       '@m2d/core': 1.5.0(docx@9.5.1)
       docx: 9.5.1
 
-  '@m2d/html@1.1.7(docx@9.5.1)':
+  '@m2d/html@1.1.8(docx@9.5.1)':
     dependencies:
       '@m2d/core': 1.5.0(docx@9.5.1)
       docx: 9.5.1
@@ -5506,7 +5506,7 @@ snapshots:
   autoprefixer@10.4.21(postcss@8.5.6):
     dependencies:
       browserslist: 4.25.0
-      caniuse-lite: 1.0.30001724
+      caniuse-lite: 1.0.30001726
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -5540,7 +5540,7 @@ snapshots:
 
   browserslist@4.25.0:
     dependencies:
-      caniuse-lite: 1.0.30001724
+      caniuse-lite: 1.0.30001726
       electron-to-chromium: 1.5.173
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.0)
@@ -5577,7 +5577,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001724: {}
+  caniuse-lite@1.0.30001726: {}
 
   ccount@2.0.1: {}
 
@@ -5683,7 +5683,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssstyle@4.5.0:
+  cssstyle@4.6.0:
     dependencies:
       '@asamuzakjp/css-color': 3.2.0
       rrweb-cssom: 0.8.0
@@ -6718,7 +6718,7 @@ snapshots:
 
   jsdom@26.1.0:
     dependencies:
-      cssstyle: 4.5.0
+      cssstyle: 4.6.0
       data-urls: 5.0.0
       decimal.js: 10.5.0
       html-encoding-sniffer: 4.0.0
@@ -7001,11 +7001,11 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.4.0(remark-math@6.0.0):
+  mdast2docx@1.4.1(remark-math@6.0.0):
     dependencies:
       '@m2d/core': 1.5.0(docx@9.5.1)
       '@m2d/emoji': 0.1.3(docx@9.5.1)
-      '@m2d/html': 1.1.7(docx@9.5.1)
+      '@m2d/html': 1.1.8(docx@9.5.1)
       '@m2d/image': 1.3.1(docx@9.5.1)
       '@m2d/list': 0.0.8(docx@9.5.1)
       '@m2d/math': 0.0.6(docx@9.5.1)(remark-math@6.0.0)
@@ -7297,7 +7297,7 @@ snapshots:
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001724
+      caniuse-lite: 1.0.30001726
       postcss: 8.4.31
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -7564,7 +7564,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.6.0: {}
+  prettier@3.6.1: {}
 
   pretty-format@27.5.1:
     dependencies:
