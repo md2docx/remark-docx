@@ -36,7 +36,7 @@
     "@repo/typescript-config": "workspace:*",
     "@testing-library/react": "^16.3.0",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "docx": "^9.5.1",
-    "mdast2docx": "1.3.5"
+    "mdast2docx": "1.4.0"
   },
   "funding": [
     {
