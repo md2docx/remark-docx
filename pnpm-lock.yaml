@@ -65,7 +65,7 @@ importers:
         version: 19.1.0(react@19.1.0)
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
+        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(@babel/core@7.28.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
       remark-frontmatter:
         specifier: ^5.0.0
         version: 5.0.0
@@ -135,7 +135,7 @@ importers:
         version: 0.0.5(@types/react@19.1.8)(react@19.1.0)
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
+        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(@babel/core@7.28.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
       react18-themes:
         specifier: ^3.2.0
         version: 3.2.0(@types/react@19.1.8)(next@15.4.1(@babel/core@7.28.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
@@ -304,7 +304,7 @@ importers:
         version: 4.1.8(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
+        version: 1.1.4(@types/react@19.1.8)(next@15.4.1(@babel/core@7.28.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0)
       remark-frontmatter:
         specifier: ^5.0.0
         version: 5.0.0
@@ -2851,8 +2851,8 @@ packages:
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
-  marked@16.0.0:
-    resolution: {integrity: sha512-MUKMXDjsD/eptB7GPzxo4xcnLS6oo7/RHimUMHEDRhUooPwmN9BEpMl7AEOJv3bmso169wHI2wUF9VQgL7zfmA==}
+  marked@16.1.0:
+    resolution: {integrity: sha512-Me7BNa1aqrxVinDnFfvCgHh2yHvLbFvILBs899MhuBpbE5VPzpSqv7alaESfkqkgc9JNvUGH4gqwZeOzLnY8Jg==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -6861,7 +6861,7 @@ snapshots:
 
   markdown-table@3.0.4: {}
 
-  marked@16.0.0: {}
+  marked@16.1.0: {}
 
   math-intrinsics@1.1.0: {}
 
@@ -7024,7 +7024,7 @@ snapshots:
       katex: 0.16.22
       khroma: 2.1.0
       lodash-es: 4.17.21
-      marked: 16.0.0
+      marked: 16.1.0
       roughjs: 4.6.6
       stylis: 4.3.6
       ts-dedent: 2.2.0
@@ -7620,7 +7620,7 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react18-loaders@1.1.4(@types/react@19.1.8)(next@15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0):
+  react18-loaders@1.1.4(@types/react@19.1.8)(next@15.4.1(@babel/core@7.28.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2))(react@19.1.0):
     dependencies:
       '@types/react': 19.1.8
       r18gs: 2.1.0(@types/react@19.1.8)(react@19.1.0)
