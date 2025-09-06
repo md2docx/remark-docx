@@ -4,12 +4,12 @@ import { OutputType } from "docx";
 import { IDocxProps, ISectionProps, toDocx } from "mdast2docx";
 import {
   htmlPlugin,
-  imagePlugin,
+  mermaidPlugin,
   tablePlugin,
   listPlugin,
   mathPlugin,
   emojiPlugin,
-  mermaidPlugin,
+  imagePlugin,
 } from "mdast2docx/dist/plugins";
 
 /**
