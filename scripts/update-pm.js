@@ -4,7 +4,12 @@ const path = require("path");
 const packageJSON = require("../package.json");
 
 // Update pnpm to latest version
-execSync("pnpm self-update");
+try {
+  execSync("pnpm turbo telemetry disable");
+  execSync("pnpm self-update");
+} catch (err) {
+  console.warn("Could not update pnpm: ", err);
+}
 
 const PNPM_VERSION = execSync("pnpm -v").toString().trim();
 packageJSON.packageManager = `pnpm@${PNPM_VERSION}`;
