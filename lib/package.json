@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "docx": "^9.5.1",
-    "mdast2docx": "1.4.1"
+    "mdast2docx": "1.4.2"
   },
   "funding": [
     {
