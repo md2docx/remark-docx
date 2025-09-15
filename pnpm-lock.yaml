@@ -1724,8 +1724,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.8.3:
-    resolution: {integrity: sha512-mcE+Wr2CAhHNWxXN/DdTI+n4gsPc5QpXpWnyCQWiQYIYZX+ZMJ8juXZgjRa/0/YPJo/NSsgW15/YgmI4nbysYw==}
+  baseline-browser-mapping@2.8.4:
+    resolution: {integrity: sha512-L+YvJwGAgwJBV1p6ffpSTa2KRc69EeeYGYjRVWKs0GKrK+LON0GC0gV+rKSNtALEDvMDqkvCFq9r1r94/Gjwxw==}
     hasBin: true
 
   better-path-resolve@1.0.0:
@@ -5771,7 +5771,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.8.3: {}
+  baseline-browser-mapping@2.8.4: {}
 
   better-path-resolve@1.0.0:
     dependencies:
@@ -5796,7 +5796,7 @@ snapshots:
 
   browserslist@4.26.0:
     dependencies:
-      baseline-browser-mapping: 2.8.3
+      baseline-browser-mapping: 2.8.4
       caniuse-lite: 1.0.30001741
       electron-to-chromium: 1.5.218
       node-releases: 2.0.21
