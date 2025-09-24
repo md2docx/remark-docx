@@ -23,7 +23,7 @@
     "@types/node": "^24.5.2",
     "pre-commit": "^1.2.2",
     "prettier": "^3.6.2",
-    "turbo": "^2.5.7",
+    "turbo": "^2.5.8",
     "turborepo-template-upgrade": "^0.8.0"
   },
   "packageManager": "pnpm@9.15.0",
