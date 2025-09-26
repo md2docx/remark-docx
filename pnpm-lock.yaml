@@ -48,8 +48,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.5.1
-        version: 1.5.1(remark-math@6.0.0)
+        specifier: 1.6.0
+        version: 1.6.0(remark-math@6.0.0)(sharp@0.34.4)
       next:
         specifier: ^15.5.4
         version: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.93.2)
@@ -170,8 +170,8 @@ importers:
         specifier: ^9.5.1
         version: 9.5.1
       mdast2docx:
-        specifier: 1.5.1
-        version: 1.5.1(remark-math@6.0.0)
+        specifier: 1.6.0
+        version: 1.6.0(remark-math@6.0.0)(sharp@0.34.4)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -293,8 +293,8 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1
       mdast2docx:
-        specifier: 1.5.1
-        version: 1.5.1(remark-math@6.0.0)
+        specifier: 1.6.0
+        version: 1.6.0(remark-math@6.0.0)(sharp@0.34.4)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.13)(react@19.1.1)
@@ -1004,8 +1004,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/image@1.3.2':
-    resolution: {integrity: sha512-OOt5FGoAqFbK+C2S8cJb4mMh5kG/80HNqlvaWxoMJXrxM/IqJ4Fah+auhIL0LhipkBb01rq8TAJ51CYPfwcZMA==}
+  '@m2d/image@1.4.0':
+    resolution: {integrity: sha512-2t//zpe1Dt2GY1+GP2cA40V+cLk5pCLWKl1SfOPjRR7s8RmLKCZQryM+CBrccq+4v/tqMNpKjebDnYYM44AWWA==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -1324,6 +1324,14 @@ packages:
     resolution: {integrity: sha512-ARz+Bs8kY6FtitYM96PqPEVvPXqEZmPZsSkXvyX19YzDqkCaIlhCieLLMI5hxO9SRZ2XtCtm8wxhy0iJ2jxNfw==}
     cpu: [x64]
     os: [win32]
+
+  '@svg-fns/svg2img@0.0.0':
+    resolution: {integrity: sha512-9hj1BlZGabIhd8l93qge6rA+B0xb0+EDGWVA/1mHQ93Y+85aX4XQkuEptCqKogI0/BNW0Rzcedjw7idRknyy1w==}
+    peerDependencies:
+      sharp: ^0.34.4
+    peerDependenciesMeta:
+      sharp:
+        optional: true
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -3066,8 +3074,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.5.1:
-    resolution: {integrity: sha512-Wlx1MEEGGJYVhCTcHcHBiQWvsGCXKe/Uo4nzTO5g31lWbmVkYpjALQ0ie9VFQLddxoJNKfGV6wP31J3cGDZ81A==}
+  mdast2docx@1.6.0:
+    resolution: {integrity: sha512-eYCelupO95LUb2fzFgz8y5yrm2AbLgAGgkSMZqAMxwDHhpp8qMEZi9GsdE8FceALApKDzuVcvfoqmqwvGhNcEw==}
 
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
@@ -5007,10 +5015,13 @@ snapshots:
       '@m2d/core': 1.7.0(docx@9.5.1)
       docx: 9.5.1
 
-  '@m2d/image@1.3.2(docx@9.5.1)':
+  '@m2d/image@1.4.0(docx@9.5.1)(sharp@0.34.4)':
     dependencies:
       '@m2d/core': 1.7.0(docx@9.5.1)
+      '@svg-fns/svg2img': 0.0.0(sharp@0.34.4)
       docx: 9.5.1
+    transitivePeerDependencies:
+      - sharp
 
   '@m2d/list@0.0.8(docx@9.5.1)':
     dependencies:
@@ -5253,6 +5264,10 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.52.2':
     optional: true
+
+  '@svg-fns/svg2img@0.0.0(sharp@0.34.4)':
+    optionalDependencies:
+      sharp: 0.34.4
 
   '@swc/helpers@0.5.15':
     dependencies:
@@ -7406,12 +7421,12 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.5.1(remark-math@6.0.0):
+  mdast2docx@1.6.0(remark-math@6.0.0)(sharp@0.34.4):
     dependencies:
       '@m2d/core': 1.7.0(docx@9.5.1)
       '@m2d/emoji': 0.1.3(docx@9.5.1)
       '@m2d/html': 1.1.10(docx@9.5.1)
-      '@m2d/image': 1.3.2(docx@9.5.1)
+      '@m2d/image': 1.4.0(docx@9.5.1)(sharp@0.34.4)
       '@m2d/list': 0.0.8(docx@9.5.1)
       '@m2d/math': 0.0.6(docx@9.5.1)(remark-math@6.0.0)
       '@m2d/mermaid': 1.2.2(docx@9.5.1)
@@ -7419,6 +7434,7 @@ snapshots:
       docx: 9.5.1
     transitivePeerDependencies:
       - remark-math
+      - sharp
       - supports-color
 
   mdn-data@2.12.2: {}
