@@ -48,8 +48,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       mdast2docx:
-        specifier: 1.4.2
-        version: 1.4.2(remark-math@6.0.0)
+        specifier: 1.5.1
+        version: 1.5.1(remark-math@6.0.0)
       next:
         specifier: ^15.5.4
         version: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.93.2)
@@ -170,8 +170,8 @@ importers:
         specifier: ^9.5.1
         version: 9.5.1
       mdast2docx:
-        specifier: 1.4.2
-        version: 1.4.2(remark-math@6.0.0)
+        specifier: 1.5.1
+        version: 1.5.1(remark-math@6.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -293,8 +293,8 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1
       mdast2docx:
-        specifier: 1.4.2
-        version: 1.4.2(remark-math@6.0.0)
+        specifier: 1.5.1
+        version: 1.5.1(remark-math@6.0.0)
       nextjs-darkmode:
         specifier: ^1.0.10
         version: 1.0.10(@types/react@19.1.13)(react@19.1.1)
@@ -1004,8 +1004,8 @@ packages:
     peerDependencies:
       docx: ^9.3.0
 
-  '@m2d/image@1.3.1':
-    resolution: {integrity: sha512-oXmXgzP3+bq8d8Vcdn7Ry4rmQNsbvmbwcCsDrv2WY0QPyC07/PdG5KCpPl3xLqmVniHwr7NNSpGwIt+1DWeJpg==}
+  '@m2d/image@1.3.2':
+    resolution: {integrity: sha512-OOt5FGoAqFbK+C2S8cJb4mMh5kG/80HNqlvaWxoMJXrxM/IqJ4Fah+auhIL0LhipkBb01rq8TAJ51CYPfwcZMA==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -1036,8 +1036,8 @@ packages:
       '@types/react': '>=16.8'
       react: '>=16.8'
 
-  '@m2d/table@0.0.7':
-    resolution: {integrity: sha512-STiYGqh3jRmf6G/hMe/vocXBIib1G6aSjpxW6Ug9LvRpBM+Tzm2BxjLD6/L5xmPavIKgayF2oE/yv0vgPnLxPg==}
+  '@m2d/table@0.1.1':
+    resolution: {integrity: sha512-VcrZIt1lRo1TetMOCMSGoin0IVrBMBkX1SF0NSUbPM6smUfLm5nsO7oFnXfre7VZMnD2rM+tkzm+lHCZdON6Jw==}
     peerDependencies:
       docx: ^9.3.0
 
@@ -1733,8 +1733,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.8.6:
-    resolution: {integrity: sha512-wrH5NNqren/QMtKUEEJf7z86YjfqW/2uw3IL3/xpqZUC95SSVIFXYQeeGjL6FT/X68IROu6RMehZQS5foy2BXw==}
+  baseline-browser-mapping@2.8.7:
+    resolution: {integrity: sha512-bxxN2M3a4d1CRoQC//IqsR5XrLh0IJ8TCv2x6Y9N0nckNz/rTjZB3//GGscZziZOxmjP55rzxg/ze7usFI9FqQ==}
     hasBin: true
 
   better-path-resolve@1.0.0:
@@ -1788,8 +1788,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001743:
-    resolution: {integrity: sha512-e6Ojr7RV14Un7dz6ASD0aZDmQPT/A+eZU+nuTNfjqmRrmkmQlnTNWH0SKmqagx9PeW87UVqapSurtAXifmtdmw==}
+  caniuse-lite@1.0.30001745:
+    resolution: {integrity: sha512-ywt6i8FzvdgrrrGbr1jZVObnVv6adj+0if2/omv9cmR2oiZs30zL4DIyaptKcbOrBdOIc74QTMoJvSE2QHh5UQ==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2136,8 +2136,8 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  detect-libc@2.1.0:
-    resolution: {integrity: sha512-vEtk+OcP7VBRtQZ1EJ3bdgzSfBjgnEalLTp5zjJrS+2Z1w2KZly4SBdac/WDU3hhsNAZ9E8SC96ME4Ey8MZ7cg==}
+  detect-libc@2.1.1:
+    resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
     engines: {node: '>=8'}
 
   devlop@1.1.0:
@@ -2172,8 +2172,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.223:
-    resolution: {integrity: sha512-qKm55ic6nbEmagFlTFczML33rF90aU+WtrJ9MdTCThrcvDNdUHN4p6QfVN78U06ZmguqXIyMPyYhw2TrbDUwPQ==}
+  electron-to-chromium@1.5.224:
+    resolution: {integrity: sha512-kWAoUu/bwzvnhpdZSIc6KUyvkI1rbRXMT0Eq8pKReyOyaPZcctMli+EgvcN1PAvwVc7Tdo4Fxi2PsLNDU05mdg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3066,8 +3066,8 @@ packages:
   mdast-util-to-string@4.0.0:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
 
-  mdast2docx@1.4.2:
-    resolution: {integrity: sha512-F/vboGrVXjrQZ2eTipFixk4vSppADJx1ljWcCS8tQCuoA+/REB2BBwPh1/qjIXzXLe5L0osBhX7J1s1wgQGmPQ==}
+  mdast2docx@1.5.1:
+    resolution: {integrity: sha512-Wlx1MEEGGJYVhCTcHcHBiQWvsGCXKe/Uo4nzTO5g31lWbmVkYpjALQ0ie9VFQLddxoJNKfGV6wP31J3cGDZ81A==}
 
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
@@ -5007,7 +5007,7 @@ snapshots:
       '@m2d/core': 1.7.0(docx@9.5.1)
       docx: 9.5.1
 
-  '@m2d/image@1.3.1(docx@9.5.1)':
+  '@m2d/image@1.3.2(docx@9.5.1)':
     dependencies:
       '@m2d/core': 1.7.0(docx@9.5.1)
       docx: 9.5.1
@@ -5048,7 +5048,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@m2d/table@0.0.7(docx@9.5.1)':
+  '@m2d/table@0.1.1(docx@9.5.1)':
     dependencies:
       '@m2d/core': 1.7.0(docx@9.5.1)
       docx: 9.5.1
@@ -5755,7 +5755,7 @@ snapshots:
   autoprefixer@10.4.21(postcss@8.5.6):
     dependencies:
       browserslist: 4.26.2
-      caniuse-lite: 1.0.30001743
+      caniuse-lite: 1.0.30001745
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -5770,7 +5770,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.8.6: {}
+  baseline-browser-mapping@2.8.7: {}
 
   better-path-resolve@1.0.0:
     dependencies:
@@ -5795,9 +5795,9 @@ snapshots:
 
   browserslist@4.26.2:
     dependencies:
-      baseline-browser-mapping: 2.8.6
-      caniuse-lite: 1.0.30001743
-      electron-to-chromium: 1.5.223
+      baseline-browser-mapping: 2.8.7
+      caniuse-lite: 1.0.30001745
+      electron-to-chromium: 1.5.224
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
 
@@ -5829,7 +5829,7 @@ snapshots:
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001743: {}
+  caniuse-lite@1.0.30001745: {}
 
   ccount@2.0.1: {}
 
@@ -6192,7 +6192,7 @@ snapshots:
   detect-libc@1.0.3:
     optional: true
 
-  detect-libc@2.1.0:
+  detect-libc@2.1.1:
     optional: true
 
   devlop@1.1.0:
@@ -6232,7 +6232,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.223: {}
+  electron-to-chromium@1.5.224: {}
 
   emoji-regex@8.0.0: {}
 
@@ -7406,16 +7406,16 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
 
-  mdast2docx@1.4.2(remark-math@6.0.0):
+  mdast2docx@1.5.1(remark-math@6.0.0):
     dependencies:
       '@m2d/core': 1.7.0(docx@9.5.1)
       '@m2d/emoji': 0.1.3(docx@9.5.1)
       '@m2d/html': 1.1.10(docx@9.5.1)
-      '@m2d/image': 1.3.1(docx@9.5.1)
+      '@m2d/image': 1.3.2(docx@9.5.1)
       '@m2d/list': 0.0.8(docx@9.5.1)
       '@m2d/math': 0.0.6(docx@9.5.1)(remark-math@6.0.0)
       '@m2d/mermaid': 1.2.2(docx@9.5.1)
-      '@m2d/table': 0.0.7(docx@9.5.1)
+      '@m2d/table': 0.1.1(docx@9.5.1)
       docx: 9.5.1
     transitivePeerDependencies:
       - remark-math
@@ -7702,7 +7702,7 @@ snapshots:
     dependencies:
       '@next/env': 15.5.4
       '@swc/helpers': 0.5.15
-      caniuse-lite: 1.0.30001743
+      caniuse-lite: 1.0.30001745
       postcss: 8.4.31
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
@@ -8281,7 +8281,7 @@ snapshots:
   sharp@0.34.4:
     dependencies:
       '@img/colour': 1.0.0
-      detect-libc: 2.1.0
+      detect-libc: 2.1.1
       semver: 7.7.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.4
