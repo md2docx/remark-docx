@@ -1,5 +1,12 @@
 # @repo/shared
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @m2d/remark-docx@1.1.0
+
 ## 0.0.2
 
 ### Patch Changes

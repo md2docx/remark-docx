@@ -1,5 +1,58 @@
 # @m2d/remark-docx
 
+## 1.1.0
+
+### Minor Changes
+
+- The following dependencies were upgraded:
+
+  ### mdast2docx: 1.4.1 → 1.6.1
+
+  **Minor Changes**
+  - The following @m2d/\* dependencies were upgraded:
+  - ✨ Added `quality` option for image conversion.
+  - Defaults to **0.92**.
+  - Used only when conversion is required **and** the output format is lossy (e.g., JPEG).
+  - Improve SVG → image conversion by preferring **OffscreenCanvas** over `<canvas>` when available.
+  - OffscreenCanvas advantages:
+  - Runs in worker contexts → avoids blocking the main thread during rasterization.
+  - Provides more consistent and reliable Blob generation compared to `HTMLCanvasElement.toBlob`.
+  - Better performance for large or complex SVGs.
+  - Fallback to `<canvas>` remains for browsers without OffscreenCanvas support (e.g., Safari).
+  - The following @m2d/\* dependencies were upgraded:
+  - Add footnoteProps to ISectionProps for custom footnote styling
+  - Add blockquote styling with left indent and border.
+  - Indent: left `720`, hanging `360`
+  - Border: inset left border (`size: 20`, `space: 14`, `color: aaaaaa`)
+  - Produces visually distinct blockquotes with proper formatting
+  - Fix stableSerialize to properly pass ignoreKeys parameter to getSerializableKeys function. Possibly leading to minor performance enhancement
+  - Fixes issue parsing markdown with multiple footnotes
+  - Remove `bmp` and `gif` fallback formats. These formats are not well supported on canvas, causing issues with our Canvas-based fallback conversion.
+  - Enhanced cell styling API with full docx.js integration and comprehensive formatting options
+  - Added `IFirstRowCellProps` and `ICellProps` interfaces with complete docx.js styling support
+  - Introduced `data` property providing full access to docx.js `IParagraphOptions` and `IRunOptions`
+  - Support for comprehensive text formatting: fonts, colors, sizes, bold, italics, underline, etc.
+  - Advanced paragraph styling: alignment, spacing, indentation, numbering, bullets
+  - Code block support with `pre` property for monospace formatting
+  - Deprecated direct `alignment` property in favor of `data.alignment`
+  - Enhanced documentation with detailed styling examples and docx.js integration guide
+  - Maintained backward compatibility with existing configurations
+  - Remove deprecated alignment property from default firstRowCellProps
+  - fix: prevent variable reuse in table cell traversal
+  - Fixes [#14](https://github.com/md2docx/core/issues/14)
+  - Root cause: typo + missing `const` in `for (...)` loop caused accidental reuse of function arg (`node`).
+  - Fix: added `const` keyword and renamed the inner loop variable to avoid scope collision.
+
+  **Patch Changes**
+  - The following @m2d/\* dependencies were upgraded:
+  - Fix potential crash when footnote definition is undefined
+  - Prevent hard failure when parsing content with invalid html tags
+  - fix(list): restart ordered lists at `1.` instead of continuing numbering across lists
+  - Fix exports
+  - The following @m2d/\* dependencies were upgraded:
+  - fix text alignment
+  - Fix: fix an edge case where build might fail if the mermaid or similar plugin comes before htmlPlugin
+
 ## 1.0.0
 
 ### Major Changes
