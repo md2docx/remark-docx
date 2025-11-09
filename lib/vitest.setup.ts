@@ -52,6 +52,7 @@ const mockFetch = vi.fn(async (url: string) => {
     },
     arrayBuffer: async () => fakePng.buffer,
   };
+  // biome-ignore lint/suspicious/noExplicitAny: ok
 }) as any;
 
 vi.stubGlobal("fetch", mockFetch);

@@ -1,8 +1,8 @@
-import { LandingPage } from "@repo/shared/dist/server";
+import { readFileSync } from "node:fs";
 import { CodeDisplay, Demo } from "@repo/shared";
-import { ReactNode } from "react";
+import { LandingPage } from "@repo/shared/dist/server";
+import type { ReactNode } from "react";
 import { DownloadDocxFromAPI } from "./download-from-api";
-import { readFileSync } from "fs";
 
 export const metadata = {
   title: "Md2docx Plugin Template",

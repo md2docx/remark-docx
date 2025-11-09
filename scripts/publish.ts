@@ -1,7 +1,12 @@
 /** It is assumed that this is called only from the default branch. */
-const { execSync } = require("child_process");
+import { execSync } from "node:child_process";
+import { exit } from "node:process";
+import { name, version } from "../lib/package.json";
+import updateSecurityMd from "./update-security-md";
 
 const BRANCH = process.env.BRANCH;
+
+if (!BRANCH) exit(1);
 
 // Apply changesets if any -- e.g., coming from pre-release branches
 try {
@@ -18,18 +23,18 @@ try {
   // no changesets to be applied
 }
 
-const { version: VERSION, name } = require("../lib/package.json");
 let LATEST_VERSION = "0.0.-1";
 
 try {
-  LATEST_VERSION = execSync(`npm view ${name} version`).toString().trim() ?? "0.0.-1";
+  LATEST_VERSION =
+    execSync(`npm view ${name} version`).toString().trim() ?? "0.0.-1";
 } catch {
   // empty
 }
 
-console.log({ VERSION, LATEST_VERSION });
+console.log({ version, LATEST_VERSION });
 
-const [newMajor, newMinor] = VERSION.split(".");
+const [newMajor, newMinor] = version.split(".");
 const [oldMajor, oldMinor] = LATEST_VERSION.split(".");
 
 const isPatch = newMajor === oldMajor && newMinor === oldMinor;
@@ -40,25 +45,26 @@ if (isPatch) {
   try {
     execSync(
       `git checkout ${releaseBranch} && git merge ${BRANCH} && git push origin ${releaseBranch}`,
+      { encoding: "utf8" },
     );
-  } catch {
-    // empty
+  } catch (err) {
+    console.error("Error merging to release branch: ", err);
   }
 } else {
   try {
-    require("./update-security-md")(`${newMajor}.${newMinor}`, `${oldMajor}.${oldMinor}`);
-  } catch {
-    console.error("Failed to update security.md");
-  }
-  try {
+    updateSecurityMd(`${newMajor}.${newMinor}`, `${oldMajor}.${oldMinor}`);
     /** Create new release branch for every Major or Minor release */
-    execSync(`git checkout -b ${releaseBranch} && git push origin ${releaseBranch}`);
-  } catch {
-    console.error("Failed to create release branch");
+    execSync(
+      `git checkout -b ${releaseBranch} && git push origin ${releaseBranch}`,
+    );
+  } catch (err) {
+    console.error("Error pushing to release branch: ", err);
   }
 }
 
-const { visibility } = JSON.parse(execSync("gh repo view --json visibility").toString());
+const { visibility } = JSON.parse(
+  execSync("gh repo view --json visibility").toString(),
+);
 const provenance = visibility.toLowerCase() === "public" ? "--provenance" : "";
 
 try {
@@ -71,21 +77,17 @@ try {
 /** Create GitHub release */
 try {
   execSync(
-    `gh release create ${VERSION} --generate-notes --latest -n "$(sed '1,/^## /d;/^## /,$d' lib/CHANGELOG.md)" --title "Release v${VERSION}"`,
+    `gh release create ${version} --generate-notes --latest -n "$(sed '1,/^## /d;/^## /,$d' lib/CHANGELOG.md)" --title "Release v${version}"`,
   );
 } catch {
   try {
     execSync(
-      `gh release create ${VERSION} --generate-notes --latest --title "Release v${VERSION}"`,
+      `gh release create ${version} --generate-notes --latest --title "Release v${version}"`,
     );
   } catch {
     console.error("Failed to create GitHub release");
   }
 }
 
-try {
-  // Publish canonical packages
-  execSync("node scripts/publish-canonical.js");
-} catch {
-  console.error("Failed to publish canonical packages");
-}
+// Publish canonical packages
+execSync("pnpm tsx scripts/publish-canonical.ts");

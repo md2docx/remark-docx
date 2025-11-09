@@ -1,16 +1,16 @@
-import type { Plugin } from "unified";
+import type { OutputType } from "docx";
 import type { Root } from "mdast";
-import { OutputType } from "docx";
-import { IDocxProps, ISectionProps, toDocx } from "mdast2docx";
+import { type IDocxProps, type ISectionProps, toDocx } from "mdast2docx";
 import {
+  emojiPlugin,
   htmlPlugin,
-  mermaidPlugin,
-  tablePlugin,
+  imagePlugin,
   listPlugin,
   mathPlugin,
-  emojiPlugin,
-  imagePlugin,
+  mermaidPlugin,
+  tablePlugin,
 } from "mdast2docx/dist/plugins";
+import type { Plugin } from "unified";
 
 /**
  * Default mdast2docx plugins used when none are provided in `sectionProps`.
@@ -36,11 +36,19 @@ const defaultPlugins = [
  * @returns A unified plugin that injects a DOCX compiler.
  */
 export const remarkDocx: Plugin<
-  [outputType?: OutputType, docxProps?: IDocxProps, sectionProps?: ISectionProps],
+  [
+    outputType?: OutputType,
+    docxProps?: IDocxProps,
+    sectionProps?: ISectionProps,
+  ],
   Root
-> = function remarkDocxPlugin(outputType = "blob", docxProps = {}, sectionProps = {}) {
+> = function remarkDocxPlugin(
+  outputType = "blob",
+  docxProps = {},
+  sectionProps = {},
+) {
   // @ts-expect-error -- compiler type does not support Promise
-  this.compiler = function (node) {
+  this.compiler = (node) => {
     // If plugins are not defined in sectionProps, use the default set
     if (!sectionProps.plugins) {
       sectionProps.plugins =
@@ -49,7 +57,12 @@ export const remarkDocx: Plugin<
           : defaultPlugins;
     }
 
-    return toDocx(node as Root, docxProps, sectionProps, outputType) as Promise<OutputType>;
+    return toDocx(
+      node as Root,
+      docxProps,
+      sectionProps,
+      outputType,
+    ) as Promise<OutputType>;
   };
-  return node => node;
+  return (node) => node;
 };
