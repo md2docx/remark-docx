@@ -10,7 +10,16 @@ import {
   mermaidPlugin,
   tablePlugin,
 } from "mdast2docx/dist/plugins";
+import { DEFAULT_SECTION_PROPS } from "mdast2docx/utils";
 import type { Plugin } from "unified";
+
+export interface Mdast2DocxPluginProps {
+  mermaid?: Parameters<typeof mermaidPlugin>[0];
+  list?: Parameters<typeof listPlugin>[0];
+  table?: Parameters<typeof tablePlugin>[0];
+  emoji?: Parameters<typeof emojiPlugin>[0];
+  image?: Parameters<typeof imagePlugin>[0];
+}
 
 /**
  * A unified compiler plugin to convert MDAST to DOCX output using `mdast2docx`.
@@ -26,21 +35,16 @@ export const remarkDocx: Plugin<
     outputType?: OutputType,
     docxProps?: IDocxProps,
     sectionProps?: ISectionProps,
-    pluginProps?: {
-      mermaid?: Parameters<typeof mermaidPlugin>[0];
-      list?: Parameters<typeof listPlugin>[0];
-      table?: Parameters<typeof tablePlugin>[0];
-      emoji?: Parameters<typeof emojiPlugin>[0];
-      image?: Parameters<typeof imagePlugin>[0];
-    },
+    pluginProps?: Mdast2DocxPluginProps,
   ],
   Root
 > = function remarkDocxPlugin(
   outputType = "blob",
   docxProps = {},
-  sectionProps = {},
+  sectionProps = { ...DEFAULT_SECTION_PROPS, plugins: undefined },
   pluginProps,
 ) {
+  console.log({ DEFAULT_SECTION_PROPS });
   // @ts-expect-error -- compiler type does not support Promise
   this.compiler = (node) => {
     // If plugins are not defined in sectionProps, use the default set
