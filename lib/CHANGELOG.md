@@ -1,5 +1,11 @@
 # @m2d/remark-docx
 
+## 1.2.0
+
+### Minor Changes
+
+- 0f25ee5: Support configuring default plugins
+
 ## 1.1.0
 
 ### Minor Changes
@@ -9,6 +15,7 @@
   ### mdast2docx: 1.4.1 → 1.6.1
 
   **Minor Changes**
+
   - The following @m2d/\* dependencies were upgraded:
   - ✨ Added `quality` option for image conversion.
   - Defaults to **0.92**.
@@ -44,6 +51,7 @@
   - Fix: added `const` keyword and renamed the inner loop variable to avoid scope collision.
 
   **Patch Changes**
+
   - The following @m2d/\* dependencies were upgraded:
   - Fix potential crash when footnote definition is undefined
   - Prevent hard failure when parsing content with invalid html tags
@@ -62,6 +70,7 @@
   ### mdast2docx: 0.4.1 → 1.4.1
 
   **Minor Changes**
+
   - The following @m2d/\* dependencies were upgraded:
   - feat: add trimInnerSpaces option to section processing for whitespace normalization
   - Attempt to keep entire code block on same page.
@@ -105,9 +114,11 @@
   - Add caching to indexeddb
 
   **Major Changes**
+
   - Upgrade to V1 - @see - https://github.com/md2docx/mdast2docx/discussions/15
 
   **Patch Changes**
+
   - The following @m2d/\* dependencies were upgraded:
   - Fix HTML parsing issues in case of empty tags.
   - The following @m2d/\* dependencies were upgraded:
