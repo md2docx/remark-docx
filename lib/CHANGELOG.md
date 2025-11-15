@@ -1,5 +1,11 @@
 # @m2d/remark-docx
 
+## 1.2.2
+
+### Patch Changes
+
+- 6f99c68: Fix typescript types
+
 ## 1.2.1
 
 ### Patch Changes
