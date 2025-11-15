@@ -1,4 +1,4 @@
-import type { OutputType } from "docx";
+import type { OutputByType, OutputType } from "docx";
 import type { Root } from "mdast";
 import { type IDocxProps, type ISectionProps, toDocx } from "mdast2docx";
 import {
@@ -44,9 +44,8 @@ export const remarkDocx: Plugin<
   sectionProps = { ...DEFAULT_SECTION_PROPS, plugins: undefined },
   pluginProps,
 ) {
-  console.log({ DEFAULT_SECTION_PROPS });
   // @ts-expect-error -- compiler type does not support Promise
-  this.compiler = (node) => {
+  this.compiler = (node: Root): Promise<OutputByType[OutputType]> => {
     // If plugins are not defined in sectionProps, use the default set
     if (!sectionProps.plugins) {
       const plugins = [
@@ -64,12 +63,7 @@ export const remarkDocx: Plugin<
           : plugins;
     }
 
-    return toDocx(
-      node as Root,
-      docxProps,
-      sectionProps,
-      outputType,
-    ) as Promise<OutputType>;
+    return toDocx(node as Root, docxProps, sectionProps, outputType);
   };
   return (node) => node;
 };
