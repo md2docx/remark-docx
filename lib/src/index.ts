@@ -13,20 +13,6 @@ import {
 import type { Plugin } from "unified";
 
 /**
- * Default mdast2docx plugins used when none are provided in `sectionProps`.
- * For server-side (Node.js), excludes the `htmlPlugin` and `imagePlugin` to avoid DOM usage.
- */
-const defaultPlugins = [
-  htmlPlugin(),
-  mermaidPlugin(),
-  tablePlugin(),
-  listPlugin(),
-  mathPlugin(),
-  emojiPlugin(),
-  imagePlugin(),
-];
-
-/**
  * A unified compiler plugin to convert MDAST to DOCX output using `mdast2docx`.
  *
  * @param outputType - The output type for DOCX generation (e.g. "blob", "buffer", "base64").
@@ -40,21 +26,38 @@ export const remarkDocx: Plugin<
     outputType?: OutputType,
     docxProps?: IDocxProps,
     sectionProps?: ISectionProps,
+    pluginProps?: {
+      mermaid?: Parameters<typeof mermaidPlugin>[0];
+      list?: Parameters<typeof listPlugin>[0];
+      table?: Parameters<typeof tablePlugin>[0];
+      emoji?: Parameters<typeof emojiPlugin>[0];
+      image?: Parameters<typeof imagePlugin>[0];
+    },
   ],
   Root
 > = function remarkDocxPlugin(
   outputType = "blob",
   docxProps = {},
   sectionProps = {},
+  pluginProps,
 ) {
   // @ts-expect-error -- compiler type does not support Promise
   this.compiler = (node) => {
     // If plugins are not defined in sectionProps, use the default set
     if (!sectionProps.plugins) {
+      const plugins = [
+        mermaidPlugin(pluginProps?.mermaid),
+        htmlPlugin(),
+        listPlugin(pluginProps?.list),
+        mathPlugin(),
+        tablePlugin(pluginProps?.table),
+        emojiPlugin(pluginProps?.emoji),
+        imagePlugin(pluginProps?.image),
+      ];
       sectionProps.plugins =
         typeof window === "undefined"
-          ? defaultPlugins.slice(2, -1) // server-side: skip html & image plugins
-          : defaultPlugins;
+          ? plugins.slice(2, -1) // server-side: skip html & image plugins
+          : plugins;
     }
 
     return toDocx(
