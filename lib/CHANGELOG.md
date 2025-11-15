@@ -1,5 +1,11 @@
 # @m2d/remark-docx
 
+## 1.2.1
+
+### Patch Changes
+
+- 999ae78: Export Mdast2DocxPluginProps and use DEFAULT_SECTION_PROPS from deps
+
 ## 1.2.0
 
 ### Minor Changes
