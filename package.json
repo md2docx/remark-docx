@@ -19,13 +19,13 @@
     "upgrade": "tsx ./scripts/upgrade.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.4",
+    "@biomejs/biome": "2.5.0",
     "@changesets/cli": "^2.31.0",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^24.12.2",
+    "@types/node": "^25.9.3",
     "husky": "^9.1.7",
-    "tsx": "^4.21.0",
-    "turbo": "^2.9.9",
+    "tsx": "^4.22.4",
+    "turbo": "^2.9.18",
     "turborepo-template-upgrade": "^0.8.0"
   },
   "packageManager": "pnpm@10.33.4",
@@ -36,6 +36,11 @@
     "overrides": {
       "cross-spawn@<6.0.6": ">=6.0.6",
       "next": "15.5.6"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
