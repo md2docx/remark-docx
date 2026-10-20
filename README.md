@@ -1,3 +1,17 @@
+> [!IMPORTANT]
+> ### 📦 This repository has moved!
+>
+> Active development and maintenance of **`@m2d/remark-docx`** has moved to the unified **[md2docx](https://github.com/md2docx/md2docx)** monorepo.
+>
+> - 🏠 **Monorepo:** [github.com/md2docx/md2docx](https://github.com/md2docx/md2docx)
+> - 📂 **Package Source:** [`packages/remark-docx`](https://github.com/md2docx/md2docx/tree/main/packages/remark-docx)
+> - 📖 **Documentation:** [md2docx.js.org/docs/remark-docx](https://md2docx.js.org/docs/remark-docx)
+> - 💬 **Issues & Pull Requests:** Please submit all new issues, feedback, and PRs in the [md2docx issue tracker](https://github.com/md2docx/md2docx/issues).
+>
+> *This standalone repository is now archived and retained for historical reference only. Releases and npm updates continue from the monorepo.*
+
+---
+
 # @m2d/remark-docx <img src="https://raw.githubusercontent.com/mayank1513/mayank1513/main/popper.png" height="40"/>
 
 [![test](https://github.com/md2docx/remark-docx/actions/workflows/test.yml/badge.svg)](https://github.com/md2docx/remark-docx/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/md2docx/remark-docx/graph/badge.svg)](https://codecov.io/gh/md2docx/remark-docx) [![Version](https://img.shields.io/npm/v/@m2d/remark-docx?color=green)](https://www.npmjs.com/package/@m2d/remark-docx)
